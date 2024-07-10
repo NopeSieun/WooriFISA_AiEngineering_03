@@ -67,7 +67,8 @@
 아직도 수요일이라니 믿을 수 없음.. 간식이 너무 많아서 일주일에 1kg씩 살크업 할 것 같고 이제 겨우 3일짼데 벌써 점심 뭐 먹어야할지 모르겠어서 여러모로 걱정이 된다. 아무튼 ~~코테를 잘 풀 수 있는~~ 쉽게 설명할 수 있는 가독성 좋은 코드를 구현할 수 있는 개발자가 되자! <br><br>
 
 - **python tutor**: 코드 실행 과정을 확인해볼 수 있는 시각화 도구
-<img src="https://github.com/NopeSieun/WooriFISA_03/assets/83575791/755cf8bc-9300-4cef-baf8-55891cb7242d" width="50%" height="50%"> <br>
+<img src="https://github.com/NopeSieun/WooriFISA_03/assets/83575791/755cf8bc-9300-4cef-baf8-55891cb7242d" width="50%" height="50%">
+
 - if문의 if 뒤에는 **bool()** 이 숨어있음
   - if 빈 문자열/ 리스트/ 딕셔너리/ 0 이면 아무 결과도 나오지 x
 -  **match-case**
