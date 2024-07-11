@@ -123,12 +123,75 @@
 
 ###  07.11 (4일차)
 ---
+오늘은 내가 좋아하는 참붕어빵이 간식으로 나온 날,, 근데 속 안 좋아서 하나밖에 못 먹은게 슬프다. 그치만 하나 더 챙겨왔음 ㅎ.ㅎ 이따 먹어야지~ 근데 중간에 배고파서 예감도 하나 먹었다.. 맨날 생각의 흐름대로 적고 싶은 메모 추가해서 적는건데 나중에 교육내용 어려워지면 학습 정리내용보다 메모가 더 길어질 것 같다. 막 억장 무너지는 글 500줄.. <br><br>
 
+- 어제의 예제 코드 조금 다른 방식으로 짜보기
+  - 딕셔너리를 잘 다룰줄 알면 좋음
+  ```python
+  for k, [v0, v1] in sale1.items():
+      if v0>1000:
+          print(k,v0)
+      if v1>1000:
+          print(k,v1)
+  ```
+- ipynb 파일에서 not defined 오류가 발생한다면 위의 변수정의 셀을 안 돌려본게 아닌지 확인해보기
+  - 생각보다 흔한 실수(아니면 자꾸 나만 하는 실수..)
+- **함수 사용 방식**
+  - 보통 함수 안에 파라미터(아규먼트(인자))가 숨어있음<br>
+    `str1.split(sep='/',maxsplit=2)` = `str1.split('/',2)`
+  - 정해져 있는 순서대로 넣으면 파라미터 생략 가능<br>
+    `str1.split(maxsplit=2, sep='/') #가능`
+    `str1.split(2, '/') #불가능`
+- **str.replace(old, new[, count])**: 조건에 맞는 문자열 치환
+- **str.strip([chars])**: 앞뒤 공백(엔터) 제거
+  - rstrip, lsrtp: 오른쪽/왼쪽 공백만 제거 
+  - 글자 중간의 공백/char는 제거 불가
+    - replace를 이용해서 불필요한 노이즈 제거
+- **str.join(iterable)**: split과 반대로 iterable 객체를 string으로 만들어줌<br>
+    `' '.join(a) #공백으로 합치기`
+    - ex) `dict1 = {'a': 1234, 'b':356}` -> value join 불가
+    - `' '.join(dict1.values())`
+      - #TypeError: sequence item 0: expected str instance, int found
+    - 딕셔너리는 리스트가 아님!
+      -`' '.join(str(dict1.values()))`
+      - #d i c t _ v a l u e s ( [ ' 1 2 3 4 ' ,   ' 3 5 6 ' ] )
+      - 리스트로 바꿔주자 `list(dict1.values())`
+- **dictionary 빈도수**
+  1. for문 사용 <br>
+      ```python
+        for word in lyrics:
+            if word.casefold() in word_counts:
+                word_counts[word.casefold()] += 1
+            else:
+                word_counts[word.casefold()] = 1
+      ```
+  2. collections 모듈 사용
+     ```python
+        import collections
+        collections.Counter(lyrics).most_common(10)
+     ```
+- **dictionary sort by value**
+  1. lambda 사용 <br> `sorted(dict.items(), key=lambda x:x[1])`
+  2. for문 사용 <br>
+      ```python
+         count_word_flipped = []
+        
+         # 반복문으로 (빈도수, 단어) 튜플로 리스트에 적재
+         for k, v in word_counts.items():
+             count_word_flipped.append((v, k))
+         count_word_flipped
+        
+         sorted(count_word_flipped, reverse=True)[:10]
+      ```
+- **Chaining 방식**: 함수들이 연결된 형태(왼쪽부터 순서대로 실행)
+  `lyrics.replace('(','').replace(')','')`
+- 텍스트 전처리 시 고려해야 할 점
+  - can't를 can과 not으로 분류할 것인지, cannot으로 분류할 것인지 상황에 맞게 결정해야 함 
 ***
 <br> 
 
 ###  07.12 (5일차)
 ---
-
+<br><br>
 ***
 <br> 
