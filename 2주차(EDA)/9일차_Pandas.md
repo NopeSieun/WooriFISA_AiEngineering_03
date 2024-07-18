@@ -123,7 +123,8 @@
   - `jjangu_list1.등록일자.astype(str)`<br><br>
 - **Melt**
  <p align="center">
-  <img src="https://github.com/user-attachments/assets/dbafa94e-5815-4638-9f6d-c8750ce9ccc1" width="30%" /> </p>
+  <img src="https://github.com/user-attachments/assets/dbafa94e-5815-4638-9f6d-c8750ce9ccc1" width="30%" /> </p>    
+  <small>(이미지 출처: [링크](https://pandas.pydata.org/pandas-docs/stable/_images/reshaping_melt.png))</small>
 
     
 ***
