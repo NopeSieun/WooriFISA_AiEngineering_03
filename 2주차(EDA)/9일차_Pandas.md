@@ -112,7 +112,18 @@
     ```
 <p align="center">
   <img src="https://github.com/user-attachments/assets/df8e88a0-e8a6-43fd-b6d9-3ca5ecc04e6f" width="20%" />
-</p>
+</p><br>
+
+- **datetime**: pandas df에서 시간을 관리하는 단위<br>
+  - `jjangu_list.등록일자 = pd.to_datetime(jjangu_list.등록일자)`
+  - 날짜 처리 시 datetime으로 자료형 변환이 필요할 수 o -> 시리즈.to_datetime으로 형 변환
+  - + timedelta() 함수 안에 변하는 시간을 적어서 연산 가능
+    - `jjangu_list1.등록일자 - timedelta(weeks=52)`<br><br>
+- **astype**: 브로드캐스팅으로 각 원소에 동일한 자료형 적용 
+  - `jjangu_list1.등록일자.astype(str)`<br><br>
+- **Melt**
+ <p align="center">
+  <img src="https://github.com/user-attachments/assets/dbafa94e-5815-4638-9f6d-c8750ce9ccc1" width="30%" /> </p>
 
     
 ***
