@@ -2,7 +2,9 @@
 ---
 교육 내용: 판다스(Pandas) 
 ---
-인생은 정말 힘들다. 비가 오면 6시 반에 나와도 9시 넘어서 도착하는 내 인생.. 통근 버스 주세요.. 아침에 장화 신고 왔는데 탁월한 선택이었던 것 같다. 양말이 아주 뽀송뽀송! 
+인생은 정말 힘들다. 비가 오면 6시 반에 나와도 9시 넘어서 도착하는 내 인생.. 아침에 장화 신고 왔는데 탁월한 선택이었던 것 같다. 양말이 아주 뽀송뽀송하다! 언니들이 내 가방이랑 장화를 탐내서 좀 뿌듯했다.
+<p align="center">
+<img src="https://github.com/user-attachments/assets/4614c80a-8a97-495d-8191-ec82ffca8cbd" width="30%" /> </p>
 <br><br>
 - **판다스(Pandas)**: numpy를 내부적으로 활용하는 데이터 분석 라이브러리(다양한 분석 함수 제공)<br><br>
 - **DataFrame**: index, colums, value 로 구성되어 직관적이고 데이터 전처리에 용이
@@ -12,7 +14,8 @@
     # df['Name'] #특정 컬럼을 확인하는 방법
     df.colums = ['이름','나이','점수'] #컬럼명 변경(index 변경도 가능)
     ```
-    <img src="https://github.com/user-attachments/assets/40fc8c70-f2a1-4ca6-a9c4-8b32c099834f " width="30%" /> 
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/40fc8c70-f2a1-4ca6-a9c4-8b32c099834f " width="30%" /> </p>
 
   - Numpy: 행->열 접근 <-> Pandas: 열->행 접근 `df['나이'][2] #나이 열의 2행`
   - columns: 원본에서 가져올 컬럼 이름, index: 가져올 행에 붙일 별명 
@@ -28,7 +31,8 @@
     ```python
     data['Name'] = df.Name #df의 name열을 data의 열에 붙이기
     ````
-    <img src="https://github.com/user-attachments/assets/b0bffb63-0f5b-4f0e-ab55-a1426a3ca634" width="30%" /><br><br> 
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/b0bffb63-0f5b-4f0e-ab55-a1426a3ca634" width="30%" /></p><br><br> 
 - **데이터 프레임 병합**
   -  **concat**: 단순히 겹치거나(inner), 겹치지 않는(outer) '컬럼'단위로 합치는 명령어
       ```python
@@ -38,12 +42,14 @@
     ```python
     df5.join(df5, rsuffix='_2') #lsuffix: 컬럼 왼쪽에 붙임
     ```
-    <img src="https://github.com/user-attachments/assets/bb526430-ae74-4b72-b5ae-5662616be49e" width="50%" />
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/bb526430-ae74-4b72-b5ae-5662616be49e" width="50%" /></p>
    - **merge**: 중복을 알아서 거름(가장 편한 방식)
      ```python
       pd.merge(df5,df5)
       ```
-      <img src="https://github.com/user-attachments/assets/2c9f314c-269d-4a3d-afc3-68b195ea5a95" width="50%" />
+     <p align="center">
+      <img src="https://github.com/user-attachments/assets/2c9f314c-269d-4a3d-afc3-68b195ea5a95" width="30%" /></p>
       <br><br>
 - **drop_duplicates**: 중복 행 걸러내고 1개씩만 행을 남김 <br><br>
 - **데이터프레임 접근 방법**
@@ -82,6 +88,31 @@
       df_jjang[df_jjang.Class.duplicated()==False]
       df_jjang[~df_jjang.Class.duplicated()] #같은 의미
       ```
+- **엑셀 파일로 저장**
+  1. 애초에 export 할 때 index를 생략해서 보내주는 방법
+     `df.to_excel('jjangu.xlsx', index=False)`<br>
+     <p align="center">
+      <img src="https://github.com/user-attachments/assets/90745bf3-ebf6-4060-8601-2531f0387cb8" width="30%" /></p> <br>
+    - 불러오기: `new_jjanggu = pd.read_excel('jjangu.xlsx')`
+  2. import 할 때 애초에 index는 빼고 불러오는 방법<br>
+    `new_jjanggu = pd.read_excel('/content/jjangu.xlsx',index_col=0)`<br><br>
+- 보통 csv 파일로 많이 저장함 `jjangu_list = pd.read_csv('/content/jjangu_list2.csv')`<br><br>
+- **Grouping Analysis**: 원하는 컬럼 묶어보기<br>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/57819155-b1b6-405f-a576-a38aff3c565f" width="30%" /> </p><br>
+  
+  - `df.groupby("묶음의 기준이 되는 컬럼명")["적용받는 컬럼"].적용받는 연산()`
+  - 자료형을 고려해서 묶어야 함
+    ```python
+    jjangu_list_og.groupby('반')[['담당','테스트점수']].mean() #숫자 자료형에 적용되는 연산
+    # error 발생
+    ```
+    ```python
+    jjangu_list_og.groupby(['반','담당'])[['테스트점수']].mean() #반->이름 기준으로 묶임
+    ```
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/df8e88a0-e8a6-43fd-b6d9-3ca5ecc04e6f" width="20%" />
+</p>
 
-
+    
 ***
