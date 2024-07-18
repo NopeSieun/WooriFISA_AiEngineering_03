@@ -2,7 +2,7 @@
 ---
 교육 내용: 판다스(Pandas) 
 ---
-인생은 정말 힘들다. 비가 오면 6시 반에 나와도 9시 넘어서 도착하는 내 인생.. 아침에 장화 신고 왔는데 탁월한 선택이었던 것 같다. 양말이 아주 뽀송뽀송하다! 언니들이 내 가방이랑 장화를 탐내서 좀 뿌듯했다.
+인생은 정말 힘들다. 비가 오면 6시 반에 나와도 9시 넘어서 도착하는 내 인생.. 아침에 장화 신고 왔는데 탁월한 선택이었던 것 같다. 양말이 아주 뽀송뽀송하다! 언니들이 내 가방이랑 장화를 탐내서 좀 뿌듯했다. 김치도가에서 신나서 김찌 덜다가 손가락에 덜어버렸다.. 데스크에서 후시딘 빌려주셔서 발랐더니 안 따가워져서 좋다. 감사합니당 .. ㅎㅎ
 <p align="center">
 <img src="https://github.com/user-attachments/assets/4614c80a-8a97-495d-8191-ec82ffca8cbd" width="30%" /> </p>
 <br><br>
@@ -92,7 +92,7 @@
   1. 애초에 export 할 때 index를 생략해서 보내주는 방법
      `df.to_excel('jjangu.xlsx', index=False)`<br>
      <p align="center">
-      <img src="https://github.com/user-attachments/assets/90745bf3-ebf6-4060-8601-2531f0387cb8" width="30%" /></p> <br>
+      <img src="https://github.com/user-attachments/assets/90745bf3-ebf6-4060-8601-2531f0387cb8" width="20%"/></p> <br>
     - 불러오기: `new_jjanggu = pd.read_excel('jjangu.xlsx')`
   2. import 할 때 애초에 index는 빼고 불러오는 방법<br>
     `new_jjanggu = pd.read_excel('/content/jjangu.xlsx',index_col=0)`<br><br>
@@ -121,10 +121,29 @@
     - `jjangu_list1.등록일자 - timedelta(weeks=52)`<br><br>
 - **astype**: 브로드캐스팅으로 각 원소에 동일한 자료형 적용 
   - `jjangu_list1.등록일자.astype(str)`<br><br>
-- **Melt**
+- **Melt**: wide form을 long form으로 변경 (관측치가 단일 변수(열)에 배치된 형태(행에의존))
+  - - ID 변수를 하나 또는 여러 개 지정해서 그것들을 기준으로 나머지 열의 이름과 열 값들을 아래로 쭉 나열해 재구조화 
  <p align="center">
-  <img src="https://github.com/user-attachments/assets/dbafa94e-5815-4638-9f6d-c8750ce9ccc1" width="30%" /> </p>    
-  <small>(이미지 출처: [링크](https://pandas.pydata.org/pandas-docs/stable/_images/reshaping_melt.png))</small>
+  <img src="https://github.com/user-attachments/assets/dbafa94e-5815-4638-9f6d-c8750ce9ccc1" width="60%"/> </p> 
+  
+  <br>
+  
+- **Pivot**: melt되거나 다른 여러 형식으로 뒤죽박죽인 데이터프레임을 구별하기 쉽게 재정렬
+  - `df.pivot(index='store', columns='product', values='price')`
+  - 인덱스와 행, 열을 하나하나 지정해서 데이터를 재구조화/보기좋게 구축화
+ <p align="center">
+  <img src="https://github.com/user-attachments/assets/813c185f-fc9f-423c-8c01-49b11939c89f" width="60%"/> </p>
+  
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/abb06ff4-95db-4200-9729-7e17e406e2fe" alt="Image 1" width="30%"> 원본 dataframe
+  <img src="https://github.com/user-attachments/assets/a07adca0-9851-4111-96ea-92255c7f4315" alt="Image 2" width="30%"> pivot으로 정리
+</div>
+
+
+
+    
+  
 
     
 ***
