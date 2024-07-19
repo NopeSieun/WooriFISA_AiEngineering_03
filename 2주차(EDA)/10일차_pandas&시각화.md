@@ -85,18 +85,11 @@
    - **양적변수**
      - 이산형: 변수가 취할 수 있는 값을 하나하나 셀 수 o
      - 연속형: 변수가 구간 안의 모든 값을 가질 수 o<br><br>
-- **시간 시각화** (연속형 변수): 트렌드 파악에 주로 사용 (이산형/연속형)
-<p align="center">
-<img src="https://github.com/user-attachments/assets/4b56f9d6-1559-4baa-8824-2ea615db666b" width="30%" /> </p>
-<br>
 
-- **분포 시각화**
-  - 원그래프: 크기는 비슷하고 인접해있진 않은조각들을 비교 
-<p align="center">
-<img src="https://github.com/user-attachments/assets/26554434-5d91-45f2-b57f-35f3dabc0963" width="30%" /> </p>
-
- - 트리맵: 위계 구조 데이터나 트리 구조 데이터 표시에 활용
 
 
 ***
-<small>(matplotlib 이미지 출처: [링크](https://camo.githubusercontent.com/bc3b143766ed68eb6a851900c317c5d9222eb1471888942afb35137aa5141557/68747470733a2f2f6d6174706c6f746c69622e6f72672f63686561747368656574732f63686561747368656574732d312e706e67))</small>
+<small>(matplotlib 이미지 출처: [링크](https://camo.githubusercontent.com/bc3b143766ed68eb6a851900c317c5d9222eb1471888942afb35137aa5141557/68747470733a2f2f6d6174706c6f746c69622e6f72672f63686561747368656574732f63686561747368656574732d312e706e67))</small><br>
+<small>(트리맵 이미지 출처: [링크](https://plotly.com/python/treemaps/))</small><br>
+<small>(누적 그래프 이미지 출처: [링크](https://ppss.kr/archives/21653))</small><br>
+<small>(산점도 이미지 출처: [링크](https://www.finereport.com/kr/버블-차트/))</small>
