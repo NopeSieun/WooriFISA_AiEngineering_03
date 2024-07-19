@@ -95,10 +95,34 @@
   x = [0, 2, 4, 6, 8]
   y = [1, 2, 3, 4, 5] #값 설정
   plt.plot(x,y); # ; - 메모리 출력 제거
-  plt.plot(x,y,marker='x',linestyle='--', color='red') #스타일 설정 가능 
+  plt.plot(x,y,marker='x',linestyle='--', color='red') #스타일 설정 가능
+  plt.axis([-5,50,-5,5]) #좌, 우, 하, 상 - 축의 범위 고정할 때 
+  plt.show() #그래프의 단위 설정(위 내용까지만 하나의 도화지를 공유)
   ```
 <p align="center">
-<img src="https://github.com/user-attachments/assets/1e1c0e0e-ed4b-4cb7-9de3-dd0681f282c4" width="50%" /> </p>
+<img src="https://github.com/user-attachments/assets/1e1c0e0e-ed4b-4cb7-9de3-dd0681f282c4" width="50%" /> </p><br>
+
+- **축(axis) & 레이블(label)**: 축의 범위 고정, 정렬 및 범위 설정 가능
+  ```python
+  plt.plot(np.random.randn(30).cumsum(), 'g-.x', label='2022년')
+  plt.plot(np.random.randn(30).cumsum(), 'b--^', label='2023년')
+  plt.plot(np.random.randn(30).cumsum(), 'b--^', label='2023년')
+  plt.plot(np.random.randn(30).cumsum(), 'b--^', label='2023년')
+  plt.plot(np.random.randn(30).cumsum(), 'b--^', label='2023년')
+  plt.title('연도별 분기별 매출 차이') # 제목
+  plt.xlabel('분기') # x축 제목
+  plt.ylabel('매출(단위: 억원)') # y축 제목
+  plt.axis('equal') # 시각화된 그래프를 중앙에 그릴 때
+  plt.legend(loc='upper right', frameon=False) # 범례 loc=범례 위치 고정, frameon=False 범례 뒤 음영 제거
+  ```
+<p align="center">
+<img src="https://github.com/user-attachments/assets/91ae2537-8e56-48e0-b3e6-b46e4af20787" width="50%" /> </p><br>
+
+- **폰트**: 폰트관리자를 통해 외부에서 지정 후 사용 가능
+  ```python
+  font1 = {'family': 'NanumSquareRound', 'size':20, 'color':'red'} # 계속 쓰고 싶은 폰트 규격이 있을 때
+  ```
+
 
 
 
