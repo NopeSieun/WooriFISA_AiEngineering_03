@@ -1,6 +1,6 @@
 ###  07.19 (10일차)
 ---
-교육 내용: Pandas
+교육 내용: Pandas, matplotlib, seaborn
 ---
 요즘 내 마뱀이 미모 리즈 찍는 중 ㅎㅎ 주머니에 데리고 다니고 싶다. 간만에 비가 안 와서 일찍 도착할 수 있었다. 근데 조금 감기 걸린 것 같기도 하다. 왜냐면 코가 맹맹쓰.. 오늘은 지코바 먹는 날이라 행복하다~ 치킨 최고 
 <p align="center">
@@ -38,6 +38,9 @@
     ```python
     contains = jjangu_list[jjangu_list.이름.str.contains('구')]
     jjangu_list[jjangu_list.이름.str.contains('^짱.$', regex=True)]
+    #regex = True: 정규식으로 해석하겠다는 뜻
+    contries[contries.capital.str.contains('ams',case=False)]
+    #case = False 대소문자 가리지 x
     ```
   - *정규식 정리
     ```python
