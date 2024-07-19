@@ -4,7 +4,8 @@
 ---
 요즘 내 마뱀이 미모 리즈 찍는 중 ㅎㅎ 주머니에 데리고 다니고 싶다. 아침에 헤어질 때 너무 슬펐음.. 간만에 비가 안 와서 일찍 도착할 수 있었다. 그리고 오늘은 지코바 먹어서 행복했다~ 치킨 최고다! 요즘 점점 건물 밖으로 안 나가려고 하는 것 같다. 귀찮기 때문..
 <p align="center">
-<img src="https://github.com/user-attachments/assets/8a337efd-c3d6-434a-95cc-58111092f681" width="30%" /><img src="https://github.com/user-attachments/assets/877b4f2b-4617-4c20-844a-c9d49bc56117" width="30%" />
+<img src="https://github.com/user-attachments/assets/8a337efd-c3d6-434a-95cc-58111092f681" width="30%" /><img src="https://github.com/user-attachments/assets/877b4f2b-4617-4c20-844a-c9d49bc56117" width="30%" /><img src="https://github.com/user-attachments/assets/5e028bc9-9002-4761-bccc-cb3e01706d5b" width="30%" /></p>
+
  </p>
 
 <br><br>
@@ -34,7 +35,7 @@
     ```python
     jjangu_list[jjangu_list.이름.isin(['짱구','훈이'])]
     ```
-  - **contains, startswith, endwith** - 일부/처음/끝이 일치하면 결과 출력(문자열에서 정규식 적용 가능)
+  - **contains, startswith, endwith**: 일부/처음/끝이 일치하면 결과 출력(문자열에서 정규식 적용 가능)
     ```python
     contains = jjangu_list[jjangu_list.이름.str.contains('구')]
     jjangu_list[jjangu_list.이름.str.contains('^짱.$', regex=True)]
@@ -74,9 +75,27 @@
   <img src="https://github.com/user-attachments/assets/be024439-3562-4d9e-a985-5ee3318e3d9d" width="50%" /> </p><br>
   
 - **데이터 시각화**: 자료로부터 정보를 습득하는 시간 절감
-  - 질적 변수 vs 범주형 변수
-    - 질적변수: 변수나 크기가 순서에 대한 의미를 부여할 수 없으면 명목형, 부여할 수 있으면 순서형 변수
-      
+  - 변수의 개수, 종류에 따라 다양한 시각화 방법 활용
+  - 질적 변수 vs 범주형 변수: 둘 다 비율적 의미
+    - **질적변수**
+      - 명목형 변수변수나 크기가 순서에 대한 의미를 부여할 수 없으면(평균 의미x)
+      - 순서형 변수: 부여할 수 있으면(평균 의미 o)
+      - 연산 불가 
+    - **범주형 변수**: 조사 대상을 범주로 구분하여 측정된 변수 
+   - **양적변수**
+     - 이산형: 변수가 취할 수 있는 값을 하나하나 셀 수 o
+     - 연속형: 변수가 구간 안의 모든 값을 가질 수 o<br><br>
+- **시간 시각화** (연속형 변수): 트렌드 파악에 주로 사용 (이산형/연속형)
+<p align="center">
+<img src="https://github.com/user-attachments/assets/4b56f9d6-1559-4baa-8824-2ea615db666b" width="30%" /> </p>
+<br>
+
+- **분포 시각화**
+  - 원그래프: 크기는 비슷하고 인접해있진 않은조각들을 비교 
+<p align="center">
+<img src="https://github.com/user-attachments/assets/26554434-5d91-45f2-b57f-35f3dabc0963" width="30%" /> </p>
+
+ - 트리맵: 위계 구조 데이터나 트리 구조 데이터 표시에 활용
 
 
 ***
