@@ -70,7 +70,7 @@
   - **확증적 데이터 분석(CDA: Confirmatory Data Analysis)**: 가설 설정->데이터수짐->통계분석->가설검증
   - **탐색적 데이터 분석(EDA: Exploratory Data Analysis)**: 데이터수집->시각화탐색->패턴도출->인사이트발견<br><br>
 - **메타데이터**: 데이터의 데이터<br><br>
-- **MATPLOTLIB**: 파이썬에서 매트랩과 유사한 그래프 표시를 가능하게 함
+- **MATPLOTLIB**: 파이썬에서 매트랩과 유사한 그래프 표시 가능(판다스에 연계된 시각화 도구)
 <p align="center">
   <img src="https://github.com/user-attachments/assets/be024439-3562-4d9e-a985-5ee3318e3d9d" width="50%" /> </p><br>
   
@@ -85,11 +85,22 @@
    - **양적변수**
      - 이산형: 변수가 취할 수 있는 값을 하나하나 셀 수 o
      - 연속형: 변수가 구간 안의 모든 값을 가질 수 o<br><br>
+- matplotlib 사용법
+  1) 도화지 그리기
+  2) 축 얹기
+  3) x,y 출력
+  ```python
+  plt.figure() #도화지
+  plt.axes() #축
+  x = [0, 2, 4, 6, 8]
+  y = [1, 2, 3, 4, 5] #값 설정
+  plt.plot(x,y); # ; - 메모리 출력 제거
+  plt.plot(x,y,marker='x',linestyle='--', color='red') #스타일 설정 가능 
+  ```
+<p align="center">
+<img src="https://github.com/user-attachments/assets/1e1c0e0e-ed4b-4cb7-9de3-dd0681f282c4" width="50%" /> </p>
 
 
 
 ***
 <small>(matplotlib 이미지 출처: [링크](https://camo.githubusercontent.com/bc3b143766ed68eb6a851900c317c5d9222eb1471888942afb35137aa5141557/68747470733a2f2f6d6174706c6f746c69622e6f72672f63686561747368656574732f63686561747368656574732d312e706e67))</small><br>
-<small>(트리맵 이미지 출처: [링크](https://plotly.com/python/treemaps/))</small><br>
-<small>(누적 그래프 이미지 출처: [링크](https://ppss.kr/archives/21653))</small><br>
-<small>(산점도 이미지 출처: [링크](https://www.finereport.com/kr/버블-차트/))</small>
