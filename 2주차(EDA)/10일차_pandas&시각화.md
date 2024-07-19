@@ -2,7 +2,7 @@
 ---
 교육 내용: Pandas, matplotlib, seaborn
 ---
-요즘 내 마뱀이 미모 리즈 찍는 중 ㅎㅎ 주머니에 데리고 다니고 싶다. 아침에 헤어질 때 너무 슬펐음.. 간만에 비가 안 와서 일찍 도착할 수 있었다. 그리고 오늘은 지코바 먹어서 행복했다~ 치킨 최고다! 요즘 점점 건물 밖으로 안 나가려고 하는 것 같다. 귀찮기 때문..
+요즘 내 마뱀이 미모 리즈 찍는 중 ㅎㅎ 주머니에 데리고 다니고 싶다. 아침에 헤어질 때 너무 슬펐음.. 간만에 비가 안 와서 일찍 도착할 수 있었다. 그리고 오늘은 지코바 먹어서 행복했다~ 치킨 최고다! 요즘 점점 건물 밖으로 안 나가려고 하는 것 같다. 귀찮기 때문.. 그리고 키링이 귀엽다. 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/8a337efd-c3d6-434a-95cc-58111092f681" width="30%" /><img src="https://github.com/user-attachments/assets/877b4f2b-4617-4c20-844a-c9d49bc56117" width="30%" /><img src="https://github.com/user-attachments/assets/5e028bc9-9002-4761-bccc-cb3e01706d5b" width="30%" /></p>
 
