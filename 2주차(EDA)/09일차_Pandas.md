@@ -6,6 +6,7 @@
 <p align="center">
 <img src="https://github.com/user-attachments/assets/4614c80a-8a97-495d-8191-ec82ffca8cbd" width="30%" /> </p>
 <br><br>
+
 - **판다스(Pandas)**: numpy를 내부적으로 활용하는 데이터 분석 라이브러리(다양한 분석 함수 제공)<br><br>
 - **DataFrame**: index, colums, value 로 구성되어 직관적이고 데이터 전처리에 용이
   - Series가 합쳐진 형태(2차원 구조) <br>
