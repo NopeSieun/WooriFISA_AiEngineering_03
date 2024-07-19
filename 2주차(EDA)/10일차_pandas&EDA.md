@@ -122,9 +122,70 @@
   ```python
   font1 = {'family': 'NanumSquareRound', 'size':20, 'color':'red'} # 계속 쓰고 싶은 폰트 규격이 있을 때
   ```
+  <br>
+  
+- **Bar Plots**: 범주형 데이터 - 개수(전체 중의 비율
+  ```python
+  plt.bar(x1, y1, label="Blue Bar", color='b')
+  plt.bar(x2, y2, label="Green Bar", color='g')
+  plt.plot()
+  
+  plt.xlabel("bar number")
+  plt.ylabel("bar height")
+  plt.title("Bar Chart Example")
+  plt.legend()
+  plt.show()
+  ```
+<p align="center">
+<img src="https://github.com/user-attachments/assets/93ec4844-579e-428a-b370-6bfed0c31fbc" width="50%" /> </p><br>
 
+- **히스토그램(Histograms)**: 연속형 데이터를 특정 구간으로 나눠서 그 범위에 해당하는 데이터 빈도수를 막대형태로 표시
+  - bins: 구간의 개수 설정
+  - 양적 변수 - 데이터의 중심 경향 / 변동성 / 이상치 등을 쉽게 시각적으로 판단할 수 o
+  ```python
+  plt.hist(n, bins=20) # bins 히스토그램의 구간
+  plt.title("Histogram")
+  plt.show()
+
+  plt.hist(n, cumulative=True, bins=20) # cumulative - 누적그래프
+  plt.title("Cumulative Histogram")
+  plt.show()
+  ```
+<p align="center">
+<img src="https://github.com/user-attachments/assets/792ec7d2-c7eb-4ee3-8811-ced292d6c2b1" width="39.7%" /><img src="https://github.com/user-attachments/assets/16b7840c-59c0-46ae-a08b-d60aeab28c12" width="40%" />
+ </p><br>
+
+- **Scatter Plots**: 연속형 변수와 연속형 변수의 관계성 파악하기 위해 사용
+  ```python
+  plt.scatter(x1, y1)
+  plt.scatter(x2, y2, marker='v', color='r')
+  plt.scatter(x2, y3, marker='^', color='m')
+  plt.title('Scatter Plot Example')
+  plt.show()
+  ```
+<p align="center">
+<img src="https://github.com/user-attachments/assets/cc0a6cbb-1815-421f-8e8a-e639f06273dc" width="50%" /> </p><br>
+
+- **Subplot**: 여러 개를 하나의 배경에 모두 나타낼 때 사용 -> subplot2grid 사용
+  - 그리드: 웹 서비스에서 하나의 화면을 나누는 박스의 단위 <br><br>
+- **Seaborn**: Matplotlib 기반으로 다양한 테마와 차트 기능을 추가한 시각화 패키지
+  ```python
+  import seaborn as sns
+
+  sns.set_theme(style="ticks")
+  plt.figure(figsize=(20, 20))   # 그래프 크기
+  sns.lmplot(x="x", y="y", col="dataset", hue="dataset", data=df,  # hue : 컬럼명 기준으로 데이터 색깔 구분해줌
+             col_wrap=2, ci=None, palette="muted", height=4, # col_wrap : 한 줄에 몇개의 그래프를 그릴지, palette: 색상 컨셉 지정
+             scatter_kws={"s": 100, "alpha": 0.7}); # scatter_kws : 점의 색깔, 투명도 등 속성 지정
+  
+  plt.savefig('lm.png') # 파일로 저장
+  plt.show() # close()
+  ```
+<p align="center">
+<img src="https://github.com/user-attachments/assets/70b50a13-881f-4d5e-b9cf-e57ac9afbb9c" width="50%" /> </p><br>
 
 
 
 ***
 <small>(matplotlib 이미지 출처: [링크](https://camo.githubusercontent.com/bc3b143766ed68eb6a851900c317c5d9222eb1471888942afb35137aa5141557/68747470733a2f2f6d6174706c6f746c69622e6f72672f63686561747368656574732f63686561747368656574732d312e706e67))</small><br>
+<small>(seaborn 이미지 출처: [링크](https://wikidocs.net/86290))</small>
