@@ -9,7 +9,7 @@
  </p>
 
 <br><br>
-- **Function apply**:필요 부분만 가지고 와서 동일 함수를 반복 사용하기 위한 메소드
+- **Function apply**: 필요 부분만 가지고 와서 동일 함수를 반복 사용하기 위한 메소드
   - 모든 행, 열에 대해 같은 함수 반복 적용
     ```python
     jjangu_list.apply(func) #열 단위
