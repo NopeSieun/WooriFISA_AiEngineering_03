@@ -207,7 +207,24 @@
   <p align="center">
     <img src="https://github.com/user-attachments/assets/b69c0f2b-07fc-4d8d-85d8-1340693600eb" width="50%" /> </p><br>
 
+  - **Scatter Matrix**
+    ```python
+    px.scatter_matrix(gap2007, dimensions=['gdpPercap', 'lifeExp', 'pop'], color='continent')
+    ```
+    <p align="center">
+      <img src="https://github.com/user-attachments/assets/616fd393-5ecb-4b9c-a458-3b5514ab5931" width="50%" /> </p><br>
+      
+- **PLOTLY - Line Chart**
+  ```python
+  # 연속형변수, 시간의 흐름에 따라 그릴 때
+  px.line(gapAsia, x='year', y ='lifeExp', color='country')
+  ```
+  <p align="center">
+    <img src="https://github.com/user-attachments/assets/5b299335-9b57-4ec3-8faa-97d2d7d6d284" width="50%" /> </p><br>
 
+- **카테고리형 데이터**: 데이터 관리에 용이(특정 구간 데이터가 반복되는 경우)
+  - 출력 순서 고정 및 메모리 절약 가능
+    
 ***
 
 <small>(seaborn 이미지 출처: [링크](https://wikidocs.net/86290))</small>
