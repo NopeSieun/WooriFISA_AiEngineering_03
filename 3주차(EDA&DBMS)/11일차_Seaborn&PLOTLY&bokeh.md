@@ -1,8 +1,11 @@
 ###  07.22 (11일차)
 ---
-교육 내용: Seaborn
+교육 내용: Seaborn, PLOTLY
 ---
-지하철로 오려면 3번 갈아타고 버스까지 총 4번 갈아타야 하는 공포의 상암.. 거기에 이제 지하철 무조건 반대로 타는 길치가 찾아와야하는.. 
+지하철로 오려면 3번 갈아타고 버스까지 총 4번 갈아타야 하는 공포의 상암.. 거기에 이제 지하철 무조건 반대로 타는 길치가 혼자 찾아와야하는.. 마라탕 먹자고 금요일부터 다같이 약속해놓고 다같이 김치도가 가서 밥 말아먹었다. 비 오면 김찌에 밥 땡기는 한국인들 ㅎ <br>
+<p align="center">
+<img src="https://github.com/user-attachments/assets/1b396d38-71d7-42f6-93f3-ef6f772c6793" width="50%" /> </p><br>
+
 <br><br>
 - **판다스의 categories**: 컴퓨터가 012 ABC 순서로만 데이터를 인식하므로 원하는 방식으로 특정 데이터를 재정렬해서 간직하는 자료형 존재
   - 많은 파일을 관리할 때 활용되는 자료형
@@ -224,7 +227,21 @@
 
 - **카테고리형 데이터**: 데이터 관리에 용이(특정 구간 데이터가 반복되는 경우)
   - 출력 순서 고정 및 메모리 절약 가능
-    
+    <br><br>
+- PLOTLY - **Bar Chart**
+  ```python
+  canada = gapminder[gapminder['country']=='Canada']
+
+  fig = px.bar(canada,
+                x="year",
+                y="pop",
+                title='Life expectancy in Canada', hover_data=['gdpPercap', 'lifeExp']
+                ) #hover_data:위의 그래프 각 부분에 마우스를 갖다댔을 때 'gdpPercap', 'lifeExp'의 정보가 함께 보여질 수 있게 함
+  fig.show()
+  ```
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/bde50169-5178-44a1-968e-c5b8ad945054" width="50%" /> </p><br>
+
 ***
 
 <small>(seaborn 이미지 출처: [링크](https://wikidocs.net/86290))</small>
