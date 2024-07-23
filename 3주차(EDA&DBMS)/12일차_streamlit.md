@@ -122,8 +122,21 @@
     <p align="center">
     <img src="https://github.com/user-attachments/assets/670bca28-0e50-4a5f-8d25-f1beccdfe956" width="58%" /> </p><br>
  
-
-
+- **GIT 연동**: vs code에서 작성한 코드를 깃과 연동해 업로드
+  ```sh
+  $ git init
+  # echo A >> B : B라는 제목,확장자의 파일을 생성하고 A라는 내용을 넣어주겠다
+  $ echo "# first_repo2" >> README.md
+  $ git add . # git add * : 변화가 있는 모든 파일을 추가
+  $ git status 
+  $ git commit -m "first commit" # 커밋에는 메시지가 필요하다
+  $ git status # clean~
+  $ git log # commit
+  $ git remote add origin <깃허브 주소>
+  $ git remote # 상태 확인
+  $ git branch -M main # 해당 레파지토리에서 어떤 브랜치를 사용할 것인지 지정
+  $ git push origin main # origin이라는 원격저장소(깃허브서버)에 main 브랜치를 보내겠다
+  ```
 
 
 
