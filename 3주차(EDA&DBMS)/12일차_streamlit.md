@@ -2,7 +2,7 @@
 ---
 교육 내용: 가상환경, streamlit
 ---
-오늘은 지하철은 잘 탔는데 버스를 잘못 내렸다. 근데 다른 언니도 잘못 내려서 같이 걸어왔다ㅎㅎ 요즘 수업 속도가 우주선 급이라서 정신 차리기 쉽지 않다. 코드는 안 돌아가는데 나만 돌아버리겠음.. 참붕어빵 먹고 힘내야겠다.
+오늘은 지하철은 잘 탔는데 버스를 잘못 내렸다. 근데 다른 언니도 잘못 내려서 같이 걸어왔다ㅎㅎ 요즘 수업 속도가 우주선 급이라서 정신 차리기 쉽지 않다. 코딩이 진짜 나의 길이 맞는가? 코드는 안 돌아가는데 나만 돌아버리겠음.. 참붕어빵 먹고 힘내야겠다.
 <p align="center">
 <img src="https://github.com/user-attachments/assets/58a5ba35-10c1-4253-ac3b-26329f51603c" width="40%" /> </p><br>
 <br><br>
@@ -105,10 +105,7 @@
   - columns가 입구, pages 폴더 속 파일들이 서브 (streamlit run columns.py)
     <p align="center">
     <img src="https://github.com/user-attachments/assets/cba5372e-be06-49cb-93df-4689b9d2b580" width="60%" /> </p><br>
-
-
-
-
+    
 - **디버그 테스트 - REPL**
   ```python
   def count_words(words):
