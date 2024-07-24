@@ -143,7 +143,8 @@
      ORDER BY continent, region DESC; -- continent는 ASC(기본), region DESC;
      limit 5; -- 정렬 순서로부터 앞에서 n개
     ```
-<br><br>
+<br>
+
 - **집계 쿼리**: 특정항목을 기준으로 데이터를 집계하는 그룹화 기능 (= 판다스의 groupby())
   - 집계값을 집계 함수로 계산
     ```sql
