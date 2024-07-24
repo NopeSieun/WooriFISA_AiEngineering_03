@@ -53,6 +53,7 @@
 
 - **SQL**
   - **DDL(Data Definition Language)**: 데이터 정의어 - CREATE, DROP, ALTER
+    <br>예시)
     ```sql
     SELECT * FROM sakila.actor; -- Ctrl + Enter : 현재 커서가 있는 쿼리문만 실행 
     SELECT count(*) FROM sakila.actor; -- Ctrl + Shift + Enter : 모든 쿼리문 실행
@@ -80,6 +81,8 @@
   - **DCL(Data Control Language)**: 데이터 제어어 - GRANT, REVOKE, DENY
   - 주석을 달고 싶을때는 # 또는 -- 사용(ctrl+/), 여러 줄인 경우 /* 주석 */
   - 덮어쓰기 불가 -> drop으로 지우고 다시 쓸 수 o
+  - 실무에서는 select 사용 시 *을 되도록 사용하지 x
+    - 실시간으로 데이터가 변경되는 경우가 많기 때문
 <br><br>
 - **데이터 타입, 자료형**: 더 빠르게 처리하기 위함 - 문자열/ 숫자형/ 날짜형
 <br><br>
@@ -103,9 +106,54 @@
        ```
      - 참조 무결성 제약 조건: 외래키 포함 테이블에서 참조되는 테이블의 기본 키 값이 존재하지 않는 경우. 데이터를 입력하거나 수정할 수 없도록 함
 <br><br>
-       
+- **SELECT FROM WHERE**
+  - 특정 조건을 지정해 조건에 부합하는 데이터만 조회
+    ```sql
+    -- aLias: as를 사용해 별칭 설정(as 생략가능)
+    select seq_no, movie_name, years as "년도" from fisa.box_office where years=2004;
+    ```
+  - 비교 연산자, 논리 연산자를 사용한 조건 추가 가능
+    ```sql
+    -- or 연산자로 여러 조건 함께 조회 가능
+    select count(years) from fisa.box_office where years=2004 or years=2005;
+    select count(years) from fisa.box_office where years between 2004 and 2005;
+    select count(years) from fisa.box_office where 2004 <= years and years <= 2005;
+    select count(years) from fisa.box_office where 2004 <= years && years <= 2005;
+    ```
+  - like를 사용한 특정 문자 탐색
+    ```sql
+    -- LIKE :일부 일치 탐색. % 는 0개 이상의 모든 숫자 / _ 는 한 개당 한 글자
+    SELECT movie_name FROM fisa.box_office WHERE movie_name LIKE '천년';
+    SELECT movie_name FROM fisa.box_office WHERE movie_name LIKE '%천년'; -- 천년으로 끝나는
+    SELECT movie_name FROM fisa.box_office WHERE movie_name LIKE '천년%'; -- 천년으로 시작하는
+    SELECT movie_name FROM fisa.box_office WHERE movie_name LIKE '%천년%'; -- 천년이라는 문자열이 들어가는 
+    
+    SELECT movie_name FROM fisa.box_office WHERE movie_name LIKE '천년_'; -- 천년+한글자
+    SELECT movie_name FROM fisa.box_office WHERE movie_name LIKE '%천년_'; -- 몇글자 + 천년 + 한글자
 
-
+    -- in을 사용하면 완전일치 탐색 가능 
+    select movie_name from fisa.box_office where movie_name in ('여우', '학');
+    ```
+  - order by를 이용한 정렬
+    ```sql
+    -- ORDER BY로 순서에 맞춰서 데이터 정렬(오름차순)
+    SELECT name, continent, region
+      FROM world.country
+     WHERE population > 50000000
+     ORDER BY continent, region DESC; -- continent는 ASC(기본), region DESC;
+     limit 5; -- 정렬 순서로부터 앞에서 n개
+    ```
+<br><br>
+- **집계 쿼리**: 특정항목을 기준으로 데이터를 집계하는 그룹화 기능 (= 판다스의 groupby())
+  - 집계값을 집계 함수로 계산
+    ```sql
+    -- 수학점수 평균 
+    select gender, avg(math)
+    from student_mgmt.students
+    group by gender -- 원본은 그대로 두고, 원본에 없는 값을 연산
+    having avg(math) > 60 -- where은 행연산에서의 조건, group by 결과에서의 조건은 having 절로 계산 
+    order by avg(math) desc; -- 문자열은 COLLATION 순으로 정렬됨 
+    ```
 ***
 
 <small>(DBMS 이미지 출처: [링크](https://www.geeksforgeeks.org/types-of-databases/))</small><br>
