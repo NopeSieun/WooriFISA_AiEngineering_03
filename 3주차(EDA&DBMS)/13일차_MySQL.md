@@ -156,6 +156,12 @@
     having avg(math) > 60 -- where은 행연산에서의 조건, group by 결과에서의 조건은 having 절로 계산 
     order by avg(math) desc; -- 문자열은 COLLATION 순으로 정렬됨 
     ```
+ <br>
+ 
+- **distinct**: 고유값을 찾고 싶을 때
+  ```sql
+  select count(distinct movie_name) from fisa.box_office;
+  ```
 ***
 
 <small>(DBMS 이미지 출처: [링크](https://www.geeksforgeeks.org/types-of-databases/))</small><br>
