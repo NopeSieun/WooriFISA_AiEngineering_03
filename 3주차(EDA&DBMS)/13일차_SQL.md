@@ -14,13 +14,17 @@
      - HTML, XML, JSON ..
   4) 비정형 데이터: 정해진 구조 x
      - 텍스트, 이미지(jpg, png, bmp), 음성 ..
+       
 <br><br>
+
 - **빅데이터(big data)**: 정형 + 반정형 + 비정형
   - 다양성(Variety): 구조+비구조 데이터
   - 규모(Volume): 테라바이트, 페타바이트 이상의 데이터
   - 속도(Velocity): 데이터 생성/유통/소비 기간이 대폭 단축
-  - 가치(Value), 변동성(Variability), 정확성(Veracity), 복잡성(Complexity) 
+  - 가치(Value), 변동성(Variability), 정확성(Veracity), 복잡성(Complexity)
+    
 <br><br>
+
 - **데이터베이스 관리 시스템(DBMS)**: 여러 사람의 사용을 위해 통합 관리하는 데이터 집합
   1) **계층적 DBMS**: 사용자가 데이터베이스 엑세스를 정의, 생성, 유지 관리 및 제어할 수 있도록 하는 소프트웨어 응용 프로그램
     <p align="center">
