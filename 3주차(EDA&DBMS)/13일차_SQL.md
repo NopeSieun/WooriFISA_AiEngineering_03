@@ -2,10 +2,11 @@
 ---
 교육 내용: 
 ---
-오늘 아침의 억까들: 아침부터 손 부어서 반지가 안 들어가서 빼고 가야했다. / 간만에 흰 바지 입었는데 싱크대에 있던 떡볶이 국물 담긴 냄비 위로 그릇 떨어뜨려서 다 튀어서 갈아입어야 했다. / 비 안 온대서 버스 탔는데 내리니까 비와서 비맞았다. / 버스에 사람 많은데 다 복도쪽에 앉고 안 비켜줘서 거의 맨 뒤에 앉아야 했다. /  리그오브레전드 플레이리스트가 있길래 틀었는데 진격의 거인 ost랑 브금만 계속 나와서 거인 목 베러 가는 마음으로 출근해야 했다.(바꿀 의지는 없었다) / 출첵용 계정 로그인이 갑자기 안 돼서 5번이나 다시 해야했다(그래도 박수 받았다)
+오늘 아침의 억까들: 아침부터 손 부어서 반지가 안 들어가서 빼고 가야했다. / 간만에 흰 바지 입었는데 싱크대에 있던 떡볶이 국물 담긴 냄비 위로 그릇 떨어뜨려서 다 튀어서 갈아입어야 했다. / 비 안 온대서 버스 탔는데 내리니까 비와서 비맞았다. / 버스에 사람 많은데 다 복도쪽에 앉고 안 비켜줘서 거의 맨 뒤에 앉아야 했다. /  리그오브레전드 플레이리스트가 있길래 틀었는데 진격의 거인 ost랑 브금만 계속 나와서 거인 목 베러 가는 마음으로 출근해야 했다.(바꾸기엔 너무 졸렸다) / 출첵용 계정 로그인이 갑자기 안 돼서 5번이나 다시 해야했다.(그래도 성공하고 박수도 받았다)
 <p align="center">
-<img src="https://github.com/user-attachments/assets/18c0793b-2606-4a19-8ed7-23f4cb6e648c" width="40%" /> </p>
-<p align="center">(사진은 어제 퇴근하면서 본 무지개)</p>
+<img src="https://github.com/user-attachments/assets/18c0793b-2606-4a19-8ed7-23f4cb6e648c" width="30%" /><img src="https://github.com/user-attachments/assets/7817060e-d810-457a-babd-d237264b7596" width="30%" />
+ </p>
+<p align="center">(사진은 어제 퇴근하면서 본 무지개랑 오늘 먹은 오토김밥)</p>
 <br><br>
 
 - **데이터(data)**: 어떤 값을 포함한, 가공되지 않은 1차적 자료(이름, 생일, 이미지 등)
@@ -40,6 +41,11 @@
       - 장점: 중복데이터 저장 최소화, 무결성 보장, 트랜잭션(작업단위) 처리 가능, SQL로 손쉬운 데이터 처리
   7) **NoSQL DBMS**: 비관계형 DBMS -> 확장성, 분산저장, 비정형/반정형 데이터 처리
 
+<br><br>
+- 데이터베이스 관리 스타일
+  - Data Mart(DM): 데이터를 꺼내 사용자에게 제공하는 역할
+  - Data Warehouse(DW): 하나의 통합된 형태로 정제 -> 비용/버려지는 데이터 발생 
+  - Data Lake(DL): 원본 형태 그대로 가져와 저장 -> 다양성 보존
 
 <br><br>
 - **MySQL**: 오픈소스 관계형 데이터베이스 관리 시스템 
@@ -52,10 +58,39 @@
 <p align="center">
 <img src="https://github.com/user-attachments/assets/4c948383-2764-4b21-a109-60c86c744d8e" width="50%" /> </p><br>
 
-- 데이터베이스 관리 스타일
-  - Data Mart(DM): 데이터를 꺼내 사용자에게 제공하는 역할
-  - Data Warehouse(DW): 하나의 통합된 형태로 정제 -> 비용/버려지는 데이터 발생 
-  - Data Lake(DL): 원본 형태 그대로 가져와 저장 -> 다양성 보존
+- **SQL**
+  - **DDL(Data Definition Language)**: 데이터 정의어 - CREATE, DROP, ALTER
+    ```sql
+    SELECT * FROM sakila.actor; -- Ctrl + Enter : 현재 커서가 있는 쿼리문만 실행 
+    SELECT count(*) FROM sakila.actor; -- Ctrl + Shift + Enter : 모든 쿼리문 실행
+    
+    # 명령어는 대문자, DB/컬럼명/함수 등은 소문자로 작성
+    # 리눅스에서는 대/소문자 구분, 윈도우에 깔린 MySQL은 대/소문자 구분 x
+    
+    CREATE database fisa; -- DB 생성, Ctrl + B : 쿼리를 보기좋게 정렬 
+    -- RDBMS : 정형데이터 컬럼에 대한 상세 내용까지 적어야 함 
+    
+    CREATE table fisa.hello
+    	(name VARCHAR(20) NOT NULL,
+         age INT);
+
+    drop table fisa.hello;
+    drop table if exists fisa.hello; -- 있으면 drop
+
+    create database if not exists fisa; -- 없으면 create
+
+    use fisa; -- DB 안으로 들어감
+    show tables; -- fisa 안의 테이블만 보여줌 
+    ```
+  - **DML(Data Manipulation Language)**: 데이터 조작어 - SELECT, INSERT, UPDATE, DELETE
+    - **TCL(Transaction Control Language**: 테이블 데이터 변경을 임시로 적용시킴 (취소가능)
+  - **DCL(Data Control Language)**: 데이터 제어어 - GRANT, REVOKE, DENY
+  - 주석을 달고 싶을때는 # 또는 -- 사용(ctrl+/), 여러 줄인 경우 /* 주석 */
+  - 덮어쓰기 불가 -> drop으로 지우고 다시 쓸 수 o
+
+<br><br>
+- **데이터 타입, 자료형**: 더 빠르게 처리하기 위함 - 문자열/ 숫자형/ 날짜형
+  
 
 
 ***
