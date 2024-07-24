@@ -46,11 +46,17 @@
   - 스키마: 논리적인 데이터 구조를 코드로 구현한 것, 각 스키마에 관련 테이블을 생성해 자료 관리
   - 테이블: RDBMS에서 데이터를 저장하는 2차원 형태의 DB 객체
     <p align="center">
-    <img src="https://github.com/user-attachments/assets/086cce89-63b6-4366-9319-20de897251aa" width="50%" /> </p>
+    <img src="https://github.com/user-attachments/assets/086cce89-63b6-4366-9319-20de897251aa" width="50%" /> </p><br>
+
+- MySQL 프로그램 설치: <small>([링크](https://dev.mysql.com/downloads/windows/installer/))</small>
+<p align="center">
+<img src="https://github.com/user-attachments/assets/4c948383-2764-4b21-a109-60c86c744d8e" width="50%" /> </p><br>
+
 - 데이터베이스 관리 스타일
   - Data Mart(DM): 데이터를 꺼내 사용자에게 제공하는 역할
   - Data Warehouse(DW): 하나의 통합된 형태로 정제 -> 비용/버려지는 데이터 발생 
   - Data Lake(DL): 원본 형태 그대로 가져와 저장 -> 다양성 보존
+
 
 ***
 
