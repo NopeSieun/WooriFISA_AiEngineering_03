@@ -190,4 +190,25 @@
   from dept d left join emp e on d.deptno = e.deptno 
   where e.sal >= 3000; -- 잘못 출력됨 
   ```
+<br>
+
+- **null값 주의**: null은 값 없음이므로 어떤 연산/함수가 들어가도 null이 리턴됨
+  ```sql
+  select d.dname, e.ename, e.sal, e.comm
+  from emp e, dept d 
+  where d.dname = 'SALES' AND (sal + comm) >= 2000; 
+  -- null은 값 없음이므로 어떤 연산 /함수가 들어가도 null이 리턴됨 
+  ```
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/0ec59f32-4440-4208-8873-d3b651b21f3b " width="50%" /> </p><br>
+
+
+  ```sql
+  select * from emp 
+  where (sal + ifnull(comm, 0))>=2000;
+  ```
+ <p align="center">
+  <img src="https://github.com/user-attachments/assets/4d606ef5-cf2b-4db0-8918-2f979010ec37 " width="50%" /> </p><br>
+
+
 ***
