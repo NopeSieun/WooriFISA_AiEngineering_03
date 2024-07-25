@@ -41,7 +41,6 @@
 <br>
 
 - **SQL함수**: 특정 연산을 수행하고 그 결과를 반환
-  - from -> where -> select 순으로 동작 
   - 숫자형 함수: 연산 대상과 변환값이 숫자형 (ABS(), ROUND()..)
   - 문자형 함수: 연산 대상과 변환값이 문자형 (CONCAT(), SUBSTRING()..)
   - 날짜형 함수: 연산 대상과 변환값이 날짜형 (SYSDATE(), YEAR()...)
@@ -181,5 +180,13 @@
   <p align="center">
   <img src="https://github.com/user-attachments/assets/9c7f1aa3-7bed-409b-b17f-52134183df54 " width="30%" /> </p><br>
 
-
+- **실행 순서 주의**: from - where - group by - having - select - order by - limit 순으로 실행됨
+  ```sql
+  select d.deptno, d.dname, d.loc, e.empno, e.ename, e.job, e.mgr, e.hiredate, e.sal, e.comm
+  from dept d left join emp e on d.deptno = e.deptno and e.sal >= 3000;  -- 정답 
+  
+  select d.deptno, d.dname, d.loc, e.empno, e.ename, e.job, e.mgr, e.hiredate, e.sal, e.comm
+  from dept d left join emp e on d.deptno = e.deptno 
+  where e.sal >= 3000; -- 잘못 출력됨 
+  ```
 ***
