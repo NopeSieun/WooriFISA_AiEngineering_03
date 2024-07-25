@@ -184,7 +184,8 @@
   ```sql
   select d.deptno, d.dname, d.loc, e.empno, e.ename, e.job, e.mgr, e.hiredate, e.sal, e.comm
   from dept d left join emp e on d.deptno = e.deptno and e.sal >= 3000;  -- 정답 
-  
+  ```
+  ```sql
   select d.deptno, d.dname, d.loc, e.empno, e.ename, e.job, e.mgr, e.hiredate, e.sal, e.comm
   from dept d left join emp e on d.deptno = e.deptno 
   where e.sal >= 3000; -- 잘못 출력됨 
