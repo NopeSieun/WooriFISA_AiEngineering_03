@@ -41,18 +41,13 @@
 <br>
 
 - **SQL함수**: 특정 연산을 수행하고 그 결과를 반환
+  - from -> where -> select 순으로 동작 
   - 숫자형 함수: 연산 대상과 변환값이 숫자형 (ABS(), ROUND()..)
   - 문자형 함수: 연산 대상과 변환값이 문자형 (CONCAT(), SUBSTRING()..)
   - 날짜형 함수: 연산 대상과 변환값이 날짜형 (SYSDATE(), YEAR()...)
   - 형변환 함수, 집계 함수, 윈도우 함수 등 여러 종류의 함수 사용 가능
 <br><br>
-- **Join**: 다수 table 간에 공통 데이터(컬럼단위)를 기준으로 결합
-  - 조인하는 테이블에는 같은 값을 가진 칼럼 필요
-  - 2개 이상 조인 가능
-  - 조인 시 테이블에 대한 별칭(As, Alias) 사용
-  - 조인 시 조인 조건 필요 
-  <p align="center">
-  <img src="https://github.com/user-attachments/assets/f581a4db-87e2-4ba1-84b1-56b38a7adc16" width="50%" /> </p><br>
+
 - **CAST**: 형 변환 함수 
   ```SQL
   -- int('10') type casting 
@@ -95,4 +90,76 @@
   <br>
 
 - MySQL에서는 DATABASE()와 SCHEMA()가 동일<br><br>
+- sql에는 함수 뿐 아니라 **변수**도 존재함
+  - **SET @변수이름 = 변수의 값;** -> 변수 선언 및 값 대입
+  - **SELECT @변수이름;** -> 변수의 값 출력
+    ```sql
+    set @country_name = 'AGO';
+    
+    select * from world.country where code = 'AGO';
+    select * from world.country where code = @country_name; -- 동일한 결과
+    ```
+  - group by, having 절에서는 동작 x
+  - 여러개의 쿼리문을 동적으로 변경하고 싶을 때 사용 
+    <br>
+    - 쿼리명을 미리 동적으로 준비해둘 수 있음
+      ```sql
+      SET @count = 5;
+      PREPARE mySQL FROM 'SELECT code, name, continent, region, population
+        FROM world.country
+       WHERE population > 100000000
+       ORDER BY 1 ASC
+       LIMIT ?';
+      EXECUTE mySQL USING @count;
+      ```
+<br>
+
+- **Join**: 다수 table 간에 공통 데이터(컬럼단위)를 기준으로 결합
+  - 조인하는 테이블에는 같은 값을 가진 칼럼 필요
+  - 2개 이상 조인 가능
+  - 조인 시 테이블에 대한 별칭(As, Alias) 사용
+  - 조인 시 조인 조건 필요 
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/f581a4db-87e2-4ba1-84b1-56b38a7adc16" width="40%" /> </p><br>
+
+- **동등조인**: 동등비교 연산자 사용
+  - 사용 빈도 가장 높음
+  - 테이블에서 같은 조건이 존재할 경우의 값 검색
+  - 조인하는 두 테이블에 중복된 컬럼명이 있으면 컬럼이 속한 테이블 명시
+    ```sql
+    -- 출처를 명시해야 좋은 쿼리 
+    select e.empno, e.ename, e.job, e.mgr, e.hiredate, e.sal, e.comm, e.deptno, d.dname, d.loc
+    from emp e, dept d -- 별명 설정
+    where e.deptno = d.deptno ; -- 나머지 절에서 별명 사용
+    ```
+<br>
+
+- **not-equal 조인**: 100% 일치하지 않고 특정 범위 내 데이터 조인 시 사용 (between ~ and)
+  ```sql
+  select e.empno, e.ename, e.sal, s.grade, s.losal, s.hisal
+  from emp e, salgrade s
+  where e.sal between s.losal and s.hisal;
+  ```
+  <br>
+
+- **self 조인**: 동일 테이블 내에서 진행되는 조인
+  ```sql
+  select e.ename, e.job, e.deptno
+  from emp e, emp m
+  where m.mgr = e.empno and m.ename = 'KING';
+  ```
+<br>
+
+- **outer 조인**: 조인시 조인 조건이 불충분해도 검색 가능하게 하는 조인(두 개 이상 조인될 때)
+   - 특정 데이터가 모든 테이블에 존재하지 않고 컬럼은 존재하나 null값을 보유한 경우 검색되지 않는 문제를 해결하기 위함
+     ```sql
+     SELECT * 
+     FROM emp e RIGHT OUTER JOIN dept d
+     ON e.deptno = d.deptno;
+     ```
+     ```sql
+     SELECT * 
+     FROM dept d LEFT OUTER JOIN emp e
+     ON e.deptno = d.deptno;
+     ```
 ***
