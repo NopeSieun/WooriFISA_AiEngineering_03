@@ -162,4 +162,24 @@
      FROM dept d LEFT OUTER JOIN emp e
      ON e.deptno = d.deptno;
      ```
+
+- 목적에 따라 조인의 종류를 다르게 해서 사용
+  ```sql
+  -- 모든 사원명, 매니저 명 검색,  
+  -- INNER JOIN은 두 테이블 컬럼에 모두 있어야만 출력. NULL인 값은 조회하지 않습니다 
+  SELECT e.ename 팀원, m.ename 매니저명 
+  FROM emp e, emp m 
+  where e.mgr = m.empno; -- 일치하지 않는 경우는 제외, king은 mgr값이 null이라서 걸러짐 
+  
+  -- 모든 사원명(KING포함), 매니저 명 검색, 
+  -- 단 매니저가 없는 사원(KING)도 검색되어야 함
+  -- LEFT JOIN 사용
+  SELECT e.ename 팀원, m.ename 매니저명 
+  FROM emp e LEFT JOIN emp m 
+  on e.mgr = m.empno;
+  ```
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/9c7f1aa3-7bed-409b-b17f-52134183df54 " width="50%" /> </p><br>
+
+
 ***
