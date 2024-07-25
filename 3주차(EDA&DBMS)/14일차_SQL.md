@@ -35,6 +35,9 @@
   GROUP BY movie_type
   WITH ROLLUP;
   ```
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/f36b3332-7de2-4484-90fe-63d3783a8693" width="50%" /> </p>
+
 <br>
 
 - **SQL함수**: 특정 연산을 수행하고 그 결과를 반환
@@ -49,7 +52,47 @@
   - 조인 시 테이블에 대한 별칭(As, Alias) 사용
   - 조인 시 조인 조건 필요 
   <p align="center">
-  <img src="https://github.com/user-attachments/assets/f581a4db-87e2-4ba1-84b1-56b38a7adc16" width="50%" /> </p>
+  <img src="https://github.com/user-attachments/assets/f581a4db-87e2-4ba1-84b1-56b38a7adc16" width="50%" /> </p><br>
+- **CAST**: 형 변환 함수 
+  ```SQL
+  -- int('10') type casting 
+  SELECT CAST(10 AS CHAR)                 CONV_CHAR,
+         CAST('-10' AS SIGNED)           CONV_INT, -- 양수, 음수 다 받는 자료형 
+         CAST('10.2131' AS DECIMAL)       CONV_DEC1,
+         CAST('10.2131' AS DECIMAL(6, 2)) CONV_DEC2, -- 고정소수점(최대몇자리, 소수점 이하 몇자리) 
+         CAST('10.2131' AS DOUBLE)        CONV_DOUBLE, -- 부동소수점 -> 약간 오차 발생 
+         CAST('2021-10-31' AS DATE)       CONV_DATE,
+         CAST('2021-10-31' AS DATETIME)   CONV_DATETIME;
+  ```  
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/4b4dfe67-77e2-4727-a4bb-b9a523d563eb" width="60%" /> </p>
 
+  - **CONVERT()**: CAST() 함수와 마찬가지로 형 변환하지만 AS Type 대신 type을 두 번째 매개변수로 받음<br><br>
+- **흐름제어 함수**: 특정 조건에 부합하는 경우와 아닌 경우 다른 값 반환
+  - IF(), IFNULL(), NULLIF()
+    ```sql
+    SELECT IF(2 < 1, 1, 0) IF1,  -- IF(조건, 참일때 리턴값, 거짓일 때 리턴값)
+           IF('A' = 'a', 'SAME', 'NOT SAME') IF2, -- window의 MYSQL에서는 대소문자 구분 X 
+           IF(1 = 2, 1, 'A') IF3;
+    ```
+    ```sql
+    -- NULLIF() 함수는 두 매개변수 expr1과 expr2 값이 같으면 NULL을, 같지 않으면 expr1을 반환
+    SELECT NULLIF(1, 1) NULLIF1,
+           NULLIF(1, 0) NULLIF2,
+           NULLIF(NULL, NULL) NULLIF3;
+    ```
+<br>
 
+- **CASE문**: 조건문
+  CASE 값, WHEN 명제, 참이면 THEN 출력
+  ```sql
+  SELECT WHEN 25 BETWEEN 1 AND 19 THEN '10대'
+         WHEN 25 BETWEEN 20 AND 29 THEN '20대'
+         WHEN 25 BETWEEN 30 AND 39 THEN '30대'
+         ELSE '30대 이상'
+  END CASE3; -- END 해당 조건을 부르기 위한 ALIAS
+  ```
+  <br>
+
+- MySQL에서는 DATABASE()와 SCHEMA()가 동일<br><br>
 ***
