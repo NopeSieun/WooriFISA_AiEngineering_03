@@ -179,7 +179,7 @@
   on e.mgr = m.empno;
   ```
   <p align="center">
-  <img src="https://github.com/user-attachments/assets/9c7f1aa3-7bed-409b-b17f-52134183df54 " width="50%" /> </p><br>
+  <img src="https://github.com/user-attachments/assets/9c7f1aa3-7bed-409b-b17f-52134183df54 " width="30%" /> </p><br>
 
 
 ***
