@@ -200,7 +200,7 @@
   -- null은 값 없음이므로 어떤 연산 /함수가 들어가도 null이 리턴됨 
   ```
   <p align="center">
-  <img src="https://github.com/user-attachments/assets/0ec59f32-4440-4208-8873-d3b651b21f3b " width="50%" /> </p><br>
+  <img src="https://github.com/user-attachments/assets/0ec59f32-4440-4208-8873-d3b651b21f3b " width="30%" /> </p><br>
 
 
   ```sql
