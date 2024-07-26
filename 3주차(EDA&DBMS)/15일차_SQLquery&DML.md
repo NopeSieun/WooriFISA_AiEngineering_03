@@ -106,6 +106,9 @@
    - 자기 테이블/자기 컬럼에만 영향을 주는 조건들 (NOT NULL, 자료형)은 복제가 됨
   <br><br>
 - **update**: `테이블의 모든 행 변경 UPDATE 테이블명 SET 컬럼명=값`
+  ```sql
+  UPDATE emp01 SET deptno=10 WHERE ename='SMITH';
+  ```
 
 ***
 <br> 
