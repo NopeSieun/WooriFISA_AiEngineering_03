@@ -2,7 +2,10 @@
 ---
 교육 내용: 고급 SQL, ERD
 ---
-출근할 때 탄 버스에서 내가 마지막 좌석을 차지한 사람이 돼서 좀 뿌듯했다. 근데 자다가 버스 의자 작은 틈 사이로 핸드폰 빠져서 완전 당황했는데 뒤에 앉으신 분이 주워주셨다. 어떻게 주워주신거지..? 요즘 배우는 sql은 뭔가 내가 알던 sql이 아닌 느낌.. 나 취업 어떻게 하냐며..
+출근할 때 탄 버스에서 내가 마지막 좌석을 차지한 사람이 돼서 좀 뿌듯했다. 근데 자다가 버스 의자 작은 틈 사이로 핸드폰 빠져서 완전 당황했는데 뒤에 앉으신 분이 주워주셨다. 어떻게 주워주신거지..? 요즘 배우는 sql은 뭔가 내가 알던 sql이 아닌 느낌.. 나 취업 어떻게 하냐며.. 오늘은 미니 프로젝트를 진행했는데 너무 어려웠지만 다들 잘 하셔서 많이 배우 느낌이었다. 생각보다 시간이 엄청 빨리 간 것 같다. 나도 코딩 잘하고 싶다. 
+<p align="center">
+<img src="https://github.com/user-attachments/assets/1197d402-fe92-4df4-9901-6ba3ddedd4c2" width="30%" /> </p><br>
+<p align="center">오둥이 팬분이 주신 오둥 스티커</p>
 <br><br>
 - **스토어드 프로시저(Stored Procedure)**: 주 사용하는 여러개의 SQL문을 한데 묶어 함수처럼 만들어 일괄적으로 처리
   - 하나의 요청으로 여러 SQL문 실행 가능
@@ -68,7 +71,7 @@
     SELECT @msg;
     ```
     <p align="center">
-    <img src="https://github.com/user-attachments/assets/d587d1ed-c011-4bd6-a46e-823dd13d7afe" width="50%" /> </p><br>
+    <img src="https://github.com/user-attachments/assets/d587d1ed-c011-4bd6-a46e-823dd13d7afe" width="30%" /> </p><br>
 
 - **Partition**: 큰 테이블을 쪼갬 -> 물리적으로는 하나의 테이블, 논리적으로는 여러 개의 작은 테이블처럼 동작
   - 쿼리 성능 향상, 관리 용이성
@@ -78,8 +81,8 @@
     - Entity: 데이터베이스에서 표현하고자 하는 객체
     - Relationship: Entity-Entity 사이 관계
     - Attribute: 객체 속성
-    
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/520d4626-25dc-4194-91f5-dd286d1a65b0" width="60%" /> </p><br>
 
-    
 ***
 <br> 
