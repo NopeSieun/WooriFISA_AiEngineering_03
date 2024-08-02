@@ -15,7 +15,7 @@
     <p align="center">
     <img src="https://github.com/user-attachments/assets/324dd6eb-bc7b-4e94-90fd-49163efaacff " width="50%" /> </p><br>
 
-- Docker 컨테이너 생성: 이미지 기반 생성 
+- **Docker 컨테이너 생성**: 이미지 기반 생성 
   ```linux
   docker run --name mytomcat -d -p 80:8080 tomcat:9.0
   ```
@@ -30,16 +30,37 @@
     ```linux
     docker rm -f name
     ```
+  - 컨테이너 생성 후 MySQL에서 열 수 o
+<br>
 
+- Docker **기본 명령어**
+  - **docker run**: 컨테이너 실행
+    - `d`: 백그라운드에서 컨테이너 실행
+    - `it`: 인터랙티브 모드로 컨테이너 실행(터미널 입력)
+    - `-name <name>`: 컨테이너에 이름 지정
+  - **docker ps**: 실행 중인 컨테이너 확인
+    - docker ps `a`/`q`/`f <filter>`: 모든 컨테이너(실행 아니어도)/컨테이너ID/특정조건 나열
+  - **docker stop**: 실행 중인 컨테이너 중지
+    - `-t <seconds>`: 컨테이너 중지될 때까지 기다리는 시간 지정
+  - **docker rm***: 컨테이너 삭제
+    - `f`/`v`: 강제 삭제/연결된 볼륨 삭제
+  - **docker images**: 로컬에 저장된 모든 이미지 확인
+    - `a`/`q`/`-filter`: 모든 이미지/이미지 ID/특정조건 이미지 나열
+  - **docker pull/push**: 도커 이미지 다운/업로드
+  - **docker exec**: 실행 중인 컨테이너에서 명령 실행
+    - `it`: 인터랙티브 모드로 실행, 터미널 입력을 받을 수 있게 함 
+    - `-user <user>`: 특정 사용자로 명령어 실행 
+<br>
 
-
-
-
-
-
-
-
-
-
-
+- **Docker UI Manager Tool**: Docker remote API용 웹 interface
+  - 순수 client 측 구현 제공해 docker를 연결하고 편하게 관리
+    ```linux
+    docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock uifd/ui-for-docker
+    ```
+    - `-d`: 백그라운드 옵션, 실행중인 명령창이 보이지 않게 설정하는 것 
+    - `-p`: 네트워크 설정, 외부 트래픽을 컨테이너 내부로 전달하기 위해 로컬 호스트 서버와 컨테이너를 매핑하는 트래픽 포워딩 설정 (80:80 -> 호스트 80포트와 컨테이너 80포트 연결)
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/6e02673d-e61f-44a7-914d-efcd78f81ad8" width="50%"/></p>
+    <p align="center">브라우저에 접속하면 Dashboard 확인 가능</p>
+  <br>
 ***
