@@ -4,7 +4,7 @@
 ---
 오늘은 커피 대신 플럼애플티를 시켜봤는데 비싸지만 굉장히 맛있다. 이젠 말씀 안 드려도 얼음 두 개 정도 넣어주셔서 좋다. 그리고 하트도 그려주심ㅎㅎ 모니터에 구스를 키우기 시작했다. 자꾸 이상한거 끌고오고 마우스도 끌고간다. ㅋㅋㅋㅋ 어제 오늘 계속 플젝 하고 시험 보고 하느라 깃에 정리한 내용이 많이 없지만 나름 열심히 살았다고 생각한다..엔지니어링 2기 분들께서 오셔서 면접 얘기 해주셨는데, 물론 열심히 노력해야겠지만 확실히 센스는 타고나야 하는 것 같기도 하다. 그래도 아는 게 많아지면 없던 센스도 발휘할 수 있게 될 것이라고 생각한다. 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/39ecc759-408e-43e8-bb66-4eb32226ffde" width="30%" /><img src="https://github.com/user-attachments/assets/c53d0e63-ba81-40a0-be5a-fe722a52aeb3" width="40%" />
+<img src="https://github.com/user-attachments/assets/39ecc759-408e-43e8-bb66-4eb32226ffde" width="30%" /><img src="https://github.com/user-attachments/assets/c53d0e63-ba81-40a0-be5a-fe722a52aeb3" width="34%" />
  </p><br>
 <br>
 
