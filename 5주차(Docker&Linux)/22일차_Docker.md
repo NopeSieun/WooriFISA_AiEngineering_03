@@ -1,8 +1,8 @@
 ###  08.06 (22일차)
 ---
-교육 내용: Docker
+교육 내용: Docker 🐳
 ---
-아침부터 머리가 멍하다. 몸이 마치 like 해파리☠ 얼음물 먹으려고 했는데 오늘도 따뜻한 물 먹어야겠다. 비가 와서 그런지는 모르겠는데 날씨 좋다가 내리기 직전부터 갑자기 비 와서 어이 없었음. 
+아침부터 머리가 멍하다. 몸이 마치 like 해파리☠ 얼음물 먹으려고 했는데 오늘도 따뜻한 물 먹어야겠다. 비가 와서 그런지는 모르겠는데 날씨 좋다가 내리기 직전부터 갑자기 비 와서 어이 없었음. 그리고 도커가 너무 어렵다..
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/cdb75b47-4ae0-4636-8321-9c95bc3c26db" width="30%" />   <img src="https://github.com/user-attachments/assets/2b743ff6-f113-4e51-afa8-98700cc19bea" width="30%" />
@@ -36,10 +36,14 @@
   <br>
 
 - **Dockerfile**: 위의 과정들이 너무 길어서 번거로울 때 text로 정의해두기 가능
+  - 어제의 실습은 로컬 작업물을 이미지로 만드는 빌드
+  - 오늘의 실습은 기존의 이미지로부터 빌드하는 작업  
   - Dockfile을 먼저 생성 후 빌드 
   <p align="center">
   <img src="https://github.com/user-attachments/assets/fc4d9003-7f31-4048-86bf-f79eaee0be15" width="70%" /> </p><br>
 
+- **docker hub**: 깃허브의 docker 버전
+  - 커밋 후 push 
 
 <br>
 
