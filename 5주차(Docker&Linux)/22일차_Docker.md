@@ -2,7 +2,7 @@
 ---
 교육 내용: Docker 🐳
 ---
-아침부터 머리가 멍하다. 몸이 마치 like 해파리☠ 얼음물 먹으려고 했는데 오늘도 따뜻한 물 먹어야겠다. 비가 와서 그런지는 모르겠는데 날씨 좋다가 내리기 직전부터 갑자기 비 와서 어이 없었음. 그리고 도커가 너무 어렵다..
+아침부터 머리가 멍하다. 몸이 마치 like 해파리☠ 얼음물 먹으려고 했는데 오늘도 따뜻한 물 먹어야겠다. 비가 와서 그런지는 모르겠는데 날씨 좋다가 내리기 직전부터 갑자기 비 와서 어이 없었음. 그리고 도커가 너무 어렵다.. 그리고 너무 덥다. 33도 실화냐? 
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/cdb75b47-4ae0-4636-8321-9c95bc3c26db" width="30%" />   <img src="https://github.com/user-attachments/assets/2b743ff6-f113-4e51-afa8-98700cc19bea" width="30%" />
@@ -44,8 +44,14 @@
 
 - **docker hub**: 깃허브의 docker 버전
   - 커밋 후 push 
+<br><br>
 
+- Docker 컨테이너 한 번에 삭제: `docker rm -f $(docker ps -aq)`
 <br>
 
+- **Best Dockerfile**: 효율적이고 안전하게 컨테이너 이미지를 유지하는 Dockerfile이 좋은 것
+  - 경량화: 경량 이미지 사용 등(ex.`alpine`)
+  - 불필요한 자원 줄이기
+  - 필요한 파일만 복사 
 ***
 <br> 
