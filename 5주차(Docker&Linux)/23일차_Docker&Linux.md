@@ -27,4 +27,12 @@
   <p align="center">
   <img src="https://github.com/user-attachments/assets/ccd3e9e0-e213-4eb8-a0a3-b1655817bcd1" width="70%" /> </p><br>
 
+- **커널, 쉘, 터미널**
+  - **kernel**: 앱에게 인터페이스를 제공, 프로그램 연결해주는 역할(모든 os가 가지고 있음)
+  - **shell**: 종류 따라 문법 조금씩 다름, 명령어 입력하면 커널이 읽을 수 있는 코드로 해석
+    - 커널의 인터페이스
+  - **terminal**: 텍스트 기반 명령 입력/실행하는 인터페이스
+    - 컴퓨터 입출력만 담당 (키보드 + 모니터)
+ <br><br>  
+  
 ***
