@@ -72,5 +72,21 @@
   ```
 <br>
 
+- **touch** 명령어: 새로운 파일 제작
+  - `rm`으로 삭제 가능
+  - dir를 삭제할 경우 `rmdir`
+    - 내용이 들어있는 dir을 삭제하려면 `rmdir -r`
+<br><br>
+
+- **cat**
+  - create 모드: `cat 1.txt 2.txt > con.txt`
+  - append 모드: `cat 1.txt 2.txt >> con.txt`
+<br><br>
+
+- directory 관련 명령어 사용시 웬만하면 -r을 붙여주는 게 편함
+  - `cp -r test2 test2_new`
+<br><br>
+
+- **grep**: 원하는 정보 탐색 가능
 
 ***
