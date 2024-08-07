@@ -2,7 +2,7 @@
 ---
 교육 내용: Docker 컨테이너, Linux
 ---
-오늘 진짜 대박적으로 피곤한 날.. 눈앞이 빙글빙글 도는데 아무래도 한 달 딱 넘기니까 한계가 온 것 같은 그런 느낌이다. 근데 도커로 고통 받다가 리눅스 하니까 너무 행복하다 ㅎㅎ 그치만 허리가 너무 아프다. 잠깐 외출해서 한의원 가고 싶은데 너무 귀찮다. 덜 아팠나
+오늘 진짜 대박적으로 피곤한 날.. 눈앞이 빙글빙글 도는데 아무래도 한 달 딱 넘기니까 한계가 온 것 같은 그런 느낌이다. 근데 도커로 고통 받다가 리눅스 하니까 너무 행복하다 ㅎㅎ 그치만 허리가 너무 아프다. 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/1ee18f6e-8ce5-4fc0-a44a-71c58f3128b9" width="30%" /> </p>
 <p align="center">같은 반 행님이 주신 렌즈 클리너 so good<br>
@@ -61,6 +61,16 @@
     - **/usr**: 설치된 앱의 실행 파일, 문서 등(root 디렉토리와 유사한 버전)
     - **/var**: variable 데이터 저장용
   <br><br>
-  
+
+- docker hub에 commit 하기
+  ```shell
+  docker ps
+  docker commit ubuntu2 [hub repository name]
+  docker login
+  docker tag [hub repository name] [hub repository name]:1.0
+  docker push [hub repository name]
+  ```
+<br>
+
 
 ***
