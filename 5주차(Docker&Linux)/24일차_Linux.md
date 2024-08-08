@@ -48,6 +48,14 @@
     <p align="center">
     <img src="https://github.com/user-attachments/assets/e16046ea-360e-4a78-ad9e-bd23e9908f4a" width="50%" /> </p>
   - **nano**: vi 이전의 편집기(vi보다 쉽게 사용 가능)
+<br><br>
 
+- `su -`: root로 전환
+<br><br>
+
+- **셸 변수**:  `echo $변수명`으로 변수 확인
+  - **로컬변수**: 선언된 셀 안에서만 사용 가능
+  - **환경변수**: 다른 곳에서도 사용 가능
+  - 변수 삭제: `unset 변수`
 ***
 <br> 
