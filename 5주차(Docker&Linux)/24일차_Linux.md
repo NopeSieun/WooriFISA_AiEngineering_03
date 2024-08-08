@@ -38,8 +38,16 @@
   - 파일, 디렉토리 모두 생성 가능
   - 원본 삭제되면 깨짐(`cat softlink.txt` -> 찾을 수 없음 error 발생) 
     <p align="center">
-    <img src="https://github.com/user-attachments/assets/03c35c46-1d5a-40b1-b01f-a6924da68c07" width="50%" /> </p><br>
+    <img src="https://github.com/user-attachments/assets/03c35c46-1d5a-40b1-b01f-a6924da68c07" width="60%"/> </p><br>
 
+- **vi 편집기**
+  - `vi 1.txt`: txt 파일 생성 및 편집 가능
+  - `:wq`: 저장 & 나가기
+  - `cat 1.txt`: 작성 내용 확인
+  - `awk`: 원하는 열만 출력 가능
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/e16046ea-360e-4a78-ad9e-bd23e9908f4a" width="50%" /> </p>
+  - **nano**: vi 이전의 편집기(vi보다 쉽게 사용 가능)
 
 ***
 <br> 
