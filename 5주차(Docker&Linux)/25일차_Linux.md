@@ -30,6 +30,7 @@
 
 - **permission**: 파일 접근 권한
   - 권한이 없으면 permission denied 에러 발생
+  - 권한 확인: 
 <br><br>
 
 
