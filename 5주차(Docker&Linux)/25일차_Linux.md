@@ -40,6 +40,15 @@
   - **chmod**: 권한 변경 -> `chmod [권한][변경파일/디렉토리]`
 <br><br>
 
+- **chown**: 소유자 변경
+  ```linux
+  sudo chown root test1
+  sudo chown -R user01 test1 # 디렉토리
+  sudo chgrp team2 test1 # 그룹 변경
+  sudo chown user03.team2 test1 # 소유자/그룹 모두 변경
+  ```
+
+
 
 ***
 <br> 
