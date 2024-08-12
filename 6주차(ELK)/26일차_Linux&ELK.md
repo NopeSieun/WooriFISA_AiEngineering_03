@@ -52,7 +52,7 @@
 - **점수 알고리즘**: 문서 전체를 고려한 여러 요소에 의해 관련성 점수 부여
   - 문서 길이, 빈도 등을 기준으로 점수 조정
   - AI 불확실성을 조금 감소시킬 수 O
-    ```linux
+    ```JavaScript
     POST my_index/_search?q="hello"
     ```
     <p align="center">
@@ -62,4 +62,23 @@
 - **search**: GET으로 특정필드 검색
   - title 필드는 keyword 자료형이라 완전일치 아니면 검색 안 됨
   - content 필드는 text 자료형이라 들어온 문자열을 스페이스, 품사 기준으로 끊어서 색인했기 때문에 검색됨
+<br><br>
+
+- **Object Type: 필드 하위에 다른 필드 포함 가능 -> 내부적으로 평탄화된 키-값으로 색인
+  ```JavaScript
+  POST woorifisa/_doc/
+  {
+    "student": {
+      "name": "신짱구",
+      "age": 5
+    }
+  }
+  ```
+  ```javascript
+  POST woorifisa/_search?q=student.name:신짱구 #name:신짱구로 찾기 불가
+  ```
+<br>
+
+- **Nested Type**: 배열을 위한 인덱스를 품은 인덱스 -> 독립적인 데이터로 취급 (전용 쿼리로 검색 필요) 
+  
 ***
