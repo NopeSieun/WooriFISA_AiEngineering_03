@@ -49,4 +49,13 @@
     <img src="https://github.com/user-attachments/assets/6d9bed16-f3fd-4504-81d7-3aa8ab6c6456" width="50%" /> </p><br>
 <br><br>
 
+- **점수 알고리즘**: 문서 전체를 고려한 여러 요소에 의해 관련성 점수 부여
+  - 문서 길이, 빈도 등을 기준으로 점수 조정
+    ```linux
+    POST my_index/_search?q="hello"
+    ```
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/3c8d31f7-9e65-4fd1-bbd5-38ed604daf5c" width="50%" /> </p><br>
+
+
 ***
