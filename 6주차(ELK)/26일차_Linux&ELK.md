@@ -41,21 +41,25 @@
   - READ: GET, POST
     - 특정 조건을 본문에 달아서 조회할 때 POST 사용
      <p align="center">
-    <img src="https://github.com/user-attachments/assets/8ff4e5bd-bf25-4863-bf6a-f047df7fb4eb" width="50%" /> </p>
+    <img src="https://github.com/user-attachments/assets/8ff4e5bd-bf25-4863-bf6a-f047df7fb4eb" width="30%" /> </p>
   - UPDATE: PUT
     - 수정하고 싶을 때 PATCH 사용 불가 -> POST+update 사용
   - DEETE: DELETE
     <p align="center">
-    <img src="https://github.com/user-attachments/assets/6d9bed16-f3fd-4504-81d7-3aa8ab6c6456" width="50%" /> </p><br>
+    <img src="https://github.com/user-attachments/assets/6d9bed16-f3fd-4504-81d7-3aa8ab6c6456" width="30%" /> </p><br>
 <br><br>
 
 - **점수 알고리즘**: 문서 전체를 고려한 여러 요소에 의해 관련성 점수 부여
   - 문서 길이, 빈도 등을 기준으로 점수 조정
+  - AI 불확실성을 조금 감소시킬 수 O
     ```linux
     POST my_index/_search?q="hello"
     ```
     <p align="center">
-    <img src="https://github.com/user-attachments/assets/3c8d31f7-9e65-4fd1-bbd5-38ed604daf5c" width="50%" /> </p><br>
+    <img src="https://github.com/user-attachments/assets/3c8d31f7-9e65-4fd1-bbd5-38ed604daf5c" width="30%" /> </p>
+  <br>
 
-
+- **search**: GET으로 특정필드 검색
+  - title 필드는 keyword 자료형이라 완전일치 아니면 검색 안 됨
+  - content 필드는 text 자료형이라 들어온 문자열을 스페이스, 품사 기준으로 끊어서 색인했기 때문에 검색됨
 ***
