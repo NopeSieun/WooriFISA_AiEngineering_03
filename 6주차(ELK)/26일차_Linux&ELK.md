@@ -35,9 +35,18 @@
   - localhost 주소 공유해서 사용 
 <br><br>
 
-- Elasticsearch는 검색 특화 엔진
+- Elasticsearch는 검색 특화 엔진 - GET, POST, PUT, DELETE, HEAD
   - CREATE: POST, PUT
+    - document 번호가 필요하지 않은 경우(ex. 로그) 안 붙여도 됨 
   - READ: GET, POST
+    - 특정 조건을 본문에 달아서 조회할 때 POST 사용
+     <p align="center">
+    <img src="https://github.com/user-attachments/assets/8ff4e5bd-bf25-4863-bf6a-f047df7fb4eb" width="50%" /> </p>
   - UPDATE: PUT
+    - 수정하고 싶을 때 PATCH 사용 불가 -> POST+update 사용
   - DEETE: DELETE
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/6d9bed16-f3fd-4504-81d7-3aa8ab6c6456" width="50%" /> </p><br>
+<br><br>
+
 ***
