@@ -57,6 +57,12 @@
     <p align="center">
     <img src="https://github.com/user-attachments/assets/2dd4b6b5-3214-4e4f-8260-5055993b6d28" width="50%" /> </p><br>
 
-- **query_string**: match 기능들을 눈치껏 다 만들어줌 
+- **POST _bulk**: 데이터 한 번에 집어넣을 수 있는 명령어
+<br><br>
+
+- **bool query**
+  - must : 꼭 포함/ must_not : 절대 불포함
+  - should : 해당 조건이 있으면 검색 결과에 가산점
+  - filter : 조건을 포함하되 점수에는 영향을 미치지 않는 것. (속도 빠름)
 ***
 <br> 
