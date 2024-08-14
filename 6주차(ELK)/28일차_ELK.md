@@ -4,7 +4,7 @@
 ---
 나는 오늘도 치통에 시달리는 중.. 사랑니 하나 뽑았는데 왼쪽 이빨이 다 아프다. 근데 졸려서 왼쪽으로 엎드려 잤다가 더 아파짐 ㅎ 이번달 말부터 다음달 초까지 SQLD 기술세미나 토스 빅분기 다 겹쳐 있어서 어지럽다. 그리고 여전히 서류는 우르르쾅쾅 떨어지는 중.. 낙엽인가? 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/70a0ad8c-84c0-46af-9e9c-c93b9ad32975" width="40%" /> </p><br>
+<img src="https://github.com/user-attachments/assets/70a0ad8c-84c0-46af-9e9c-c93b9ad32975" width="30%" /> </p><br>
 
 - **집계 API**: 검색 후 집계하는 방식으로 동작
   - 로그 분석, 분산 추적 등에 사용
@@ -47,7 +47,11 @@
 - **Kibana**: 브라우저 인터페이스에서 데이터를 검색하고 분석할 수 있는 오픈소스 탐색 도구
   - csv로 import
     <p align="center">
-    <img src="https://github.com/user-attachments/assets/95520573-d329-47af-995b-7106b289a3f1" width="20%" />   <img src="https://github.com/user-attachments/assets/29465594-d53c-4b91-bb0e-567500891e10" width="50%" />
- </p><br>
- 
+    <img src="https://github.com/user-attachments/assets/95520573-d329-47af-995b-7106b289a3f1" width="20%" />   <img src="https://github.com/user-attachments/assets/29465594-d53c-4b91-bb0e-567500891e10" width="50%" /></p>
+   - 다양한 종류의 대시보드 생성 가능
+     <p align="center">
+      <img src="https://github.com/user-attachments/assets/43c92a38-420e-4f80-bf91-bf221bdcc6ed" width="50%" /> </p><br>
+
+
+
 ***
