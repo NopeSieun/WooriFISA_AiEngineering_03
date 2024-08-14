@@ -44,5 +44,9 @@
 - **cardinality**: 지정한 필드가 가진 고유값의 개수를 계산해 반환
 <br><br>
 
-- **Kibana**: 브라우저 인터페이스에서 데이터를 검색하고 분석할 수 있는 오픈소스 탐색 도구 
+- **Kibana**: 브라우저 인터페이스에서 데이터를 검색하고 분석할 수 있는 오픈소스 탐색 도구
+  - csv로 import
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/95520573-d329-47af-995b-7106b289a3f1" width="30%" /> </p><br>
+ 
 ***
