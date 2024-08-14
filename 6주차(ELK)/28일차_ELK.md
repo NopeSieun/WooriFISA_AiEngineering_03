@@ -6,28 +6,41 @@
 <br><br>
 - **집계 API**: 검색 후 집계하는 방식으로 동작
   - 로그 분석, 분산 추적 등에 사용
-  - 없는 필드에 대한 조회 시 value 0으로 뜸 
-  - **매트릭 집계**: 산술연산 (min, max, sum avg..)
-    ```javascript
-    GET kibana_sample_data_ecommerce/_search
-    {
-      "size": 0, // 검색 결과를 생략
-      "query": {
-        "match": {  
-          "geoip.continent_name": "Africa"
-        }
-      }, // 조건에 맞는 DOC를 검색,
-      "aggs": {
-        "EUR로 결제한 총 금액": {  // 집계 결과를 어떤 이름으로 부를지
-          "sum": { // 어떤 집계를 수행할 것인지,
-            "field": "products.taxful_price" }}}}
-    ```
-  - **버킷 집계**: 문서를 쪼개서 부분 집합으로 나눔
+  - 없는 필드에 대한 조회 시 value 0으로 뜸
+<br><br>
+
+- **매트릭 집계**: 산술연산 (min, max, sum avg..)
+  ```javascript
+  GET kibana_sample_data_ecommerce/_search
+  {
+    "size": 0, // 검색 결과를 생략
+    "query": {
+      "match": {  
+        "geoip.continent_name": "Africa"
+      }
+    }, // 조건에 맞는 DOC를 검색,
+    "aggs": {
+      "EUR로 결제한 총 금액": {  // 집계 결과를 어떤 이름으로 부를지
+        "sum": { // 어떤 집계를 수행할 것인지,
+          "field": "products.taxful_price" }}}}
+  ```
+<br>
+
+- **버킷 집계**: 문서를 쪼개서 부분 집합으로 나눔
+  - from(시작구간) - to(마지막구간): 범위 직접 지정
+  - histogram 집계: 간격(intervel) 지정
+    - 0으로 떨어지지 않는 음수 구간 설정 -> **offset** 파라미터 이용
+      ```javascript
+      "histogram": {
+        "field": "DistanceKilometers",
+        "interval": 5000,
+        "offset": -50
+      }, ...
+      ```
 <br><br>
 
 - **cardinality**: 지정한 필드가 가진 고유값의 개수를 계산해 반환
-  - from(시작구간) - to(마지막구간): 범위 직접 지정
-  - histogram 집계: 간격(intervel) 지정
+
 <br><br>
 
 
