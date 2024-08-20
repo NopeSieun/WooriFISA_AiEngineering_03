@@ -1,8 +1,8 @@
 ###  08.20 (31일차)
 ---
-교육 내용: ELK 팀 프로젝트
+교육 내용: ELK 팀 프로젝트, WEB
 ---
-어제 깃 저장 안 해서 오후 내용이 다 날아가버렸다.. 습관적 커밋 필수.. 버스에서 무아지경으로 헤드뱅잉 하다가 카드 날렸는데 여러명이 찾아주심 ㅎ 감사했다. 오늘 태국음식 먹으려고 했다가 사람 많아서 옆에 있는 뼈해장국 가게에서 먹었는데 배가 터질 것 같다. 근데 고망고도 먹음. 🥭
+어제 깃 저장 안 해서 오후 내용이 다 날아가버렸다.. 습관적 커밋 필수.. 버스에서 무아지경으로 헤드뱅잉 하다가 카드 날렸는데 여러명이 찾아주심 ㅎ 감사했다. 오늘 태국음식 먹으려고 했다가 사람 많아서 옆에 있는 뼈해장국 가게에서 먹었는데 배가 터질 것 같다. 근데 고망고도 먹음.🥭 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/a3a013e1-8069-4377-a2f4-ec76f4527480" width="30%" /> </p><br>
 
@@ -28,7 +28,17 @@
       <img src="https://github.com/user-attachments/assets/8fe444b8-35f4-4d5e-a22a-d62166e99b11" width="60%" /> </p>
 <br>
 
-- **데이터스트림**: 여러 개의 인덱스가 내부적으로 구성되어 있음 
+- 많은 데이터를 관리하게 될 경우: 여러개의 노드를 하나의 클러스터로 묶어 관리
+ - index보다 작은 단위인 shard(python의 파티션 개념과 유사)로 다시 쪼개서 속도 높임
+ - 마스터 노드 선출 -> 마스터 노드 죽으면 켜져있는 노드 중 하나가 물려받음
+ - index안의 data를 생명주기 단위로 관리 -> 속도 료율 
+
+- index의 **life-cycle** - hot, warm, cold, freeze
+  - **Rollover**: 단계 전환
+      <p align="center">
+      <img src="https://github.com/user-attachments/assets/722b1ecd-f821-4a7d-aadc-aa7327cefa18" width="50%" /> </p>
+
+- **web**: HTML + CSS + JS
   
 ***
 <br> 
