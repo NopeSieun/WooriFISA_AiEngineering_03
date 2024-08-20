@@ -1,6 +1,6 @@
 ###  08.20 (31일차)
 ---
-교육 내용: ELK 팀 프로젝트, WEB
+교육 내용: ELK(팀 프로젝트), WEB
 ---
 어제 깃 저장 안 해서 오후 내용이 다 날아가버렸다.. 습관적 커밋 필수.. 버스에서 무아지경으로 헤드뱅잉 하다가 카드 날렸는데 여러명이 찾아주심 ㅎ 감사했다. 오늘 태국음식 먹으려고 했다가 사람 많아서 옆에 있는 뼈해장국 가게에서 먹었는데 배가 터질 것 같다. 근데 고망고도 먹음.🥭 
 <p align="center">
@@ -31,7 +31,7 @@
 - 많은 데이터를 관리하게 될 경우: 여러개의 노드를 하나의 클러스터로 묶어 관리
  - index보다 작은 단위인 shard(python의 파티션 개념과 유사)로 다시 쪼개서 속도 높임
  - 마스터 노드 선출 -> 마스터 노드 죽으면 켜져있는 노드 중 하나가 물려받음
- - index안의 data를 생명주기 단위로 관리 -> 속도 료율 
+ - index안의 data를 생명주기 단위로 관리 -> 속도 효율 ↑
 
 - index의 **life-cycle** - hot, warm, cold, freeze
   - **Rollover**: 단계 전환
@@ -39,9 +39,43 @@
       <img src="https://github.com/user-attachments/assets/722b1ecd-f821-4a7d-aadc-aa7327cefa18" width="50%" /> </p>
 
 - **web**: HTML + CSS + JS
-  - **HTML(Hypertext Markup Language)**: 웹페이지와 내용을 구조화하기 위해 사용하는 마크업 코드
-  - **CSS(Cascading Style Sheets)**: 웹페이지 꾸미는 용 코드
-  - **JavaScript(JS)**: HTML과 CSS로 구성된 웹 페이지를 동적으로 만들어줌 
-  
+  - **HTML(Hypertext Markup Language)**: 웹페이지 내용을 구조화하는데 사용하는 마크업 코드 (뼈대)
+  - **CSS(Cascading Style Sheets)**: 웹페이지 꾸미는 용 코드 (피부)
+  - **JavaScript(JS)**: HTML과 CSS로 구성된 웹 페이지를 동적으로 만들어줌 (뇌)
+
+- 네이버에서 장난쳐보기
+  - html을 수정하면 화면을 바꿀 수 있음(영구적 x)
+      <p align="center">
+      <img src="https://github.com/user-attachments/assets/03a83ab8-aee5-485b-9b46-830b22149efb" width="60%" /> </p><br>
+
+- **html**: 내용에 대한 타입 나타냄
+  - `<여는태그></닫는태그>` 또는 `<태그이름/> (한 줄로 끝날 경우)`
+  - **id**: 한 파일에 하나만 존재(1개만 특정 위치를 가리켜야 하는 경우)
+  - **class**: 여러개 존재 가능(여러개의 위치에 같은 속성을 적용하는 경우)
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>HTML CSS JS</title>
+    </head>
+    <body>
+    <!-- 주석 달기도 가능 -->
+    <h1 id="welcome">HTML CSS JS</h1>
+    <p>Welcome to HTML-CSS-JS.com</p>
+    <p class="class1">this is class1</p>
+    <p class="class2">this is class2</p>
+    </body>
+    </html>
+    ```
+<br>
+
+- **css**: html 파일의 <style></style> 안에 넣거나 별도로 파일 작성
+<br><br>
+
+- **JS**: html 파일의 <script></script> 안에 넣거나 별도로 파일 작성
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/9b054417-d80d-42dc-ba6a-f386e57896b5" width="60%" /> </p><br>
+
+
 ***
 <br> 
