@@ -22,6 +22,10 @@
       <p align="center">
       <img src="https://github.com/user-attachments/assets/ee44bb1b-3c94-414c-9555-c0290f4d628f" width="60%" /> </p>
 
+    - 피드백 받은 개선 방안: 신용/체크카드 구분 코드를 짤 때 get_info 함수 안에서 데이터를 후처리 하는 방법을 사용했는데, 인덱스를 맵핑해서 전처리하는 방법도 좋을 것 같다고 말씀해주셨음.
+      <p align="center">
+      <img src="https://github.com/user-attachments/assets/8fe444b8-35f4-4d5e-a22a-d62166e99b11" width="60%" /> </p>
+
 
   
 ***
