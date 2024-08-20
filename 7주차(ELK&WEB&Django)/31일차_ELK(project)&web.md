@@ -39,6 +39,9 @@
       <img src="https://github.com/user-attachments/assets/722b1ecd-f821-4a7d-aadc-aa7327cefa18" width="50%" /> </p>
 
 - **web**: HTML + CSS + JS
+  - **HTML(Hypertext Markup Language)**: 웹페이지와 내용을 구조화하기 위해 사용하는 마크업 코드
+  - **CSS(Cascading Style Sheets)**: 웹페이지 꾸미는 용 코드
+  - **JavaScript(JS)**: HTML과 CSS로 구성된 웹 페이지를 동적으로 만들어줌 
   
 ***
 <br> 
