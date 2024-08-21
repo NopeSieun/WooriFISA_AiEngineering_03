@@ -67,7 +67,18 @@
   - 위치한 영역 만큼만 차지
   - 수평으로 쌓이는 형태
   <br><br>
+
+- sytle 설정
   
-    
-    
+  
+- **Bootstrap**: 웹사이트를 쉽게 만들 수 있게 도와주는 CSS, JS 프레임워크
+  - css와 JS를 추가로 가져와서 사용 가능(띄어쓰기로 구분)
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/a49492a9-b564-49ba-8a3f-6fc89cfe91ea" width="50%" /> </p>
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/d88cc240-baaa-49cb-bc7b-6a0a80da2986" width="50%" /> </p>
+
+  - **layout**: 12개의 column으로 한 행을 나누어 관리
+    - 알아서 컬럼 등분해서 관리됨
+  - **image tag**: 반응형으로 설정하는 경우 多 (창 크기가 변경될 때 유동적으로 크기 변경) 
 ***
