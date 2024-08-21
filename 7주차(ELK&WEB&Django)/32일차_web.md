@@ -49,4 +49,25 @@
   <p align="center">
   <img src="https://github.com/user-attachments/assets/5b8a8ec1-ab55-4405-a2c6-48743596b41a" width="50%" /> </p><br>
 
+- **레이아웃**
+  - **div** 로 배치
+  - **semantic tag**: header, nav, main, section, article, aside, footer
+    ```html
+    <div id="header" role="banner">
+    <div id="container" role="main">
+    ```
+    <br>
+
+- **block 태그**: h, p, ol, li, ul
+  - 위치한 영역을 전체 줄로 차지
+  - 수직으로 레이아웃 쌓이는 형태
+<br><br>
+
+- **inline 태그**: a, img, span
+  - 위치한 영역 만큼만 차지
+  - 수평으로 쌓이는 형태
+  <br><br>
+  
+    
+    
 ***
