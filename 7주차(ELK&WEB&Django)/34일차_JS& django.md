@@ -30,3 +30,20 @@
   ```
 <br>
 
+- **익명함수**: 쓰고 버리기 위해 만들어 놓은 것
+  - 필요하면 이름을 달아줄 수 o
+    ```js
+    function() {return hello}
+    ```
+    <br>
+
+- **class**: js에 없는 문법 -> **function** 을 사용하기 편하게 class에 입혀놓음 
+  - **this**: 새로 만드는 객체의 메모리 주소
+    ```js
+    function player(name, team, position){
+      this.name = name;
+      this.team = team;
+      this.position = position;
+     }
+    ```
+    
