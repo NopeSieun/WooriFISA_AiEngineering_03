@@ -2,7 +2,7 @@
 ---
 교육 내용: Django
 ---
-성심당 빵 사올
+성심당 빵 왕창 선물받아서 아침에 가져와서 먹을랬는데 까먹어버려서 너무 슬픈 월요일.. 
 <br><br>
 - **Django**: 파이썬 기반 웹프레임워크
   - **MVT 패턴**: 모델-뷰-컨트롤러
@@ -12,6 +12,12 @@
   - **ORM(Object-Relational Mapping)**지원: SQL 쿼리를 직접 쓰지 않아도 DB와 연결 가능
 <br><br>
 
+- django 구조
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/c66ff327-9989-43da-a1e8-a34cc43e8005" width="50%" />출처: MDN 웹문서 Django 소개글 </p>
+
+ <br><br>
+ 
 - conda 말고 파이썬 가상환경 만들기
   ```linux
   virtualenv -–python=python3.11 myproject
@@ -36,8 +42,8 @@
   <img src="https://github.com/user-attachments/assets/2b582dbe-a8c3-4157-8e80-43f84f7cd502" width="50%" /> </p><br>
 
 - **migration**: DB에 변화 적용시킬 때 마이그레이션 해줘야 함
-  ```python
-  $ python manage.py migrate
+  ```linux
+  (myproject) C:\ITStudy\07_Django\django_project\fisa_django>python manage.py makemigrations
   ```
 <br>
 
@@ -64,4 +70,21 @@
       path("blog/", include('blog.urls')), #localhost:8000/blog/실제blog/urls.py에 적힌 경로 
   ]
   ```
+
+- settings.py 안에 app을 등록해야 사용 가능 
+  ```python
+  INSTALLED_APPS = [
+      "django.contrib.admin",
+      "django.contrib.auth",
+      "django.contrib.contenttypes",
+      "django.contrib.sessions",
+      "django.contrib.messages",
+      "django.contrib.staticfiles",
+      "blog",
+      "board",
+  ]
+  ```
+  <br>
+
+- 
 ***
