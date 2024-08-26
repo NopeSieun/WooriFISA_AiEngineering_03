@@ -2,7 +2,7 @@
 ---
 교육 내용: Django
 ---
-성심당 빵 왕창 선물받아서 아침에 가져와서 먹을랬는데 까먹어버려서 너무 슬픈 월요일.. 
+성심당 빵 왕창 선물받아서 아침에 가져와서 먹을랬는데 까먹어버려서 너무 슬픈 월요일.. 그래서 육회덮밥을 시켰다(?)
 <br><br>
 - **Django**: 파이썬 기반 웹프레임워크
   - **MVT 패턴**: 모델-뷰-컨트롤러
@@ -86,5 +86,25 @@
   ```
   <br>
 
-- 
+- 가져온 데이터 -> **templates**로 보내야 함
+  ```python
+  from django.shortcuts import render
+  from .models import Post 
+
+  def index(request):
+    posts = Post.objects.all() # 쿼리로 데이터 가져오기 
+    return render(
+        request,
+        'blog/index.html',
+        {
+            'posts':posts,
+        }
+    )
+  ```
+<br>
+
+- 업로드 하고싶지 않은 파일 -> **gitignore**
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/fc6f1606-0e55-4532-9e87-f58bfc5dc4b7" width="30%" /> </p>
+  
 ***
