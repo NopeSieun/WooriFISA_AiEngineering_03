@@ -40,5 +40,5 @@
   - <small>[공식 문서를 보고 추가해주자](https://docs.allauth.org/en/latest/installation/quickstart.html)</small>
     <p align="center">
     <img src="https://github.com/user-attachments/assets/fd4a2e68-9483-4793-9eb1-127195f3dee3" width="50%" /> </p><br>
-
+  - 템플릿 오버라이드: app_name/templates/account 폴더 안에 넣어주면됨 (allauth가 제공하는 템플릿 내용과 동일해야 함)
 ***
