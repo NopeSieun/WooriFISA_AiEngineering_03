@@ -41,4 +41,11 @@
     <p align="center">
     <img src="https://github.com/user-attachments/assets/fd4a2e68-9483-4793-9eb1-127195f3dee3" width="50%" /> </p><br>
   - 템플릿 오버라이드: app_name/templates/account 폴더 안에 넣어주면됨 (allauth가 제공하는 템플릿 내용과 동일해야 함)
+  - `from django.contrib.auth import authenticate, login` - authenticate : 인가, login : 인증 담당
+  - post-list에 유저 로그인 상태면 글쓰기
+    ```html
+    {% if user.is_authenticated %}   
+             <a class="btn btn-secondary" href="{% url 'blog_app:create' %}" role="button">글쓰기</a>&nbsp;&nbsp;          
+    {% endif %}
+    ```
 ***
