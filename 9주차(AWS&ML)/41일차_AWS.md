@@ -62,7 +62,12 @@
     <p align="center">
     <img src="https://github.com/user-attachments/assets/eda3bded-a0bd-440c-a2f3-63593fcfab88" width="25%" /> </p>
   - `.env` 생성해서 주요 정보 숨기기
-<br><br>
+    - `settings.py`에서 설정
+      ```python
+      from dotenv import load_dotenv
+      load_dotenv()
+      ```
+<br>
 
 
 ***
