@@ -35,7 +35,8 @@
 <br><br>
 
 - **VPC**: 퍼블릭 클라우드 환경에서 사용할 수 있는 고객 전용 사설 네트워크
-  - 데이터 센터 내부에 우리만의 규칙을 설정하기 위한 방법 (내 서버의 정책) 
+  - 데이터 센터 내부에 우리만의 규칙을 설정하기 위한 방법 (내 서버의 정책)
+  - 네트워크 설정: 내 vpc 선택해서 그 안에 만들어둔 보안그룹 선택
 <br><br>
   
 - django에서 RDS로 마이그레이션
@@ -75,6 +76,7 @@
     <p align="center">
     <img src="https://github.com/user-attachments/assets/cf67dbe3-daee-4cd6-8af8-7b30161c83da" width="45%" /> </p>
   - 유동 ip - 껐다 켜면 변경됨 -> 탄력적 ip를 받아서 인스턴스와 연결
+    - 인스턴스 종료 방법: 탄력적 ip 연결 해제 -> 릴리즈 -> 인스턴스 terminate
     <p align="center">
     <img src="https://github.com/user-attachments/assets/078fa495-b538-4e3f-97c6-9df1031446f2" width="45%" /> </p>
   - 아웃바운드: 들어오는 호출에 대한 결과 리턴 -> 모두에게 열려있음
