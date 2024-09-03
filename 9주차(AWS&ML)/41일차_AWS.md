@@ -5,7 +5,7 @@
 컴퓨터 맛감 이슈로 오늘의 깃이 싹 ~~ 날아가버렸고.. 습관적 저장은 필수고.. 
 <br><br>
 
-- 오늘 실습 중 발생 문제: MySQL 워크벤치에 DB 연결이 안 되는 문제 발생
+- **TroubleShoot**: MySQL 워크벤치에 DB 연결이 안 되는 문제 발생
   - 해결: 퍼블릭 엑세스 -> 예
     <p align="center">
     <img src="https://github.com/user-attachments/assets/f04eab21-4602-4bfb-b2e8-b4ee18e2733a" width="25%" /> </p><br>
