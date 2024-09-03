@@ -8,7 +8,7 @@
 - **TroubleShoot**: MySQL 워크벤치에 DB 연결이 안 되는 문제 발생
   - 해결: 퍼블릭 엑세스 -> 예
     <p align="center">
-    <img src="https://github.com/user-attachments/assets/f04eab21-4602-4bfb-b2e8-b4ee18e2733a" width="25%" /> </p><br>
+    <img src="https://github.com/user-attachments/assets/f04eab21-4602-4bfb-b2e8-b4ee18e2733a" width="20%" /> </p><br>
   - RDS는 데이터베이스에 퍼블릭 IP 주소를 할당
   - VPC 외부의 Amazon EC2 인스턴스 및 다른 리소스가 데이터베이스에 연결 가능(VPC 내부의 리소스도 데이터베이스에 연결 가능)
     
@@ -60,7 +60,7 @@
     ```
   - MySQL 워크벤치 스키마 명 통일해서 만들어주기
     <p align="center">
-    <img src="https://github.com/user-attachments/assets/eda3bded-a0bd-440c-a2f3-63593fcfab88" width="25%" /> </p>
+    <img src="https://github.com/user-attachments/assets/eda3bded-a0bd-440c-a2f3-63593fcfab88" width="20%" /> </p>
   - `.env` 생성해서 주요 정보 숨기기
     - `settings.py`에서 설정
       ```python
@@ -69,5 +69,17 @@
       ```
 <br>
 
-
+- **EC2**: 클라우드에서 필요한 만큼 보안/네트워크를 구성하고 DB를 정할 수 있는 온디맨드 방식 서버
+  - **온디맨드**: 요구사항에 따라서 결과가 나옴
+  - 인스턴스 - 키페어 저장 후 xshell에서 세션 연결
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/cf67dbe3-daee-4cd6-8af8-7b30161c83da" width="45%" /> </p>
+  - 아웃바운드: 들어오는 호출에 대한 결과 리턴 -> 모두에게 열려있음
+  - 인바운드 규칙 수정해야 shell에서 연결 가능
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/81fb0ee0-ebed-4e90-81eb-e2ba361e831a" width="45%" /> </p>
+  - ubuntu에서 접속
+    ```linux
+    PS C:\ITStudy\08_AWS> ssh -i "sieun-keypair.pem" ubuntu@퍼블릭 IPv4 주소
+    ```
 ***
