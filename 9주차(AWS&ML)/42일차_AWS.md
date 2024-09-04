@@ -5,6 +5,10 @@
 슬 아침이 쌀쌀해지고 있어서 버스들이 에어컨을 잘 안 켜고 있는데, 그래서 잠을 너무 깊게 자게 된다. 겨울에 히터 틀면 기절할 듯..
 <br><br>
 
+- **TroubleShooting**
+  - 인스턴스 생성 시 내 VPC를 선택하지 않으면 내가 만들어둔 보안 그룹에 접근할 수 x
+<br><br>
+
 - VPC 안에 설정하는 것
   - **VPC**: 가상 네트워크
   - **서브넷**: VPC 내 IP 주소 블롱(퍼블릭/프라이빗)
@@ -32,8 +36,28 @@
   - **object**: 파일+메타데이터
   - **key**: 객체 찾기 위한 고유 식별자
   - **region**: 버킷 위치 지정으로 지연 시간/비용 최소화
+<br><br>
+
+- **버킷 생성**
+  - 엑세스 차단 시 버킷에 업로드해둔 이미지 등을 외부에서 확인할 수 x
     <p align="center">
-    <img src="https://github.com/user-attachments/assets/51e87eeb-3b50-4b34-84e4-a50b91ab1f5f" width="50%" /> </p><br>
-    
-    <br><br>
+    <img src="https://github.com/user-attachments/assets/4d0f5604-e0d9-481c-b3f0-d215e9fb2337" width="40%" /> </p>
+  - 이미지 업로드 -> ACL 설정에서 퍼블릭 설정
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/6930311e-ad3a-4301-b15a-24b6030180bf" width="40%" /> </p>
+<br><br>
+
+- 보안 자격 증명
+  - VS 코드에서 사용하기 위해서 자격 증명이 필요함 
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/1a82df58-6173-4b20-8aab-c6005461f6d1" width="20%" /> </p>
+  - 엑세스 키 생성 
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/131243e7-3cf4-4ddd-9fb3-32590b26d08c" width="50%" /> </p>
+  - 버킷 정책 설정
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/c452946c-d041-4106-8359-7331af90be8e" width="40%" /> </p>
+
+
+
 
