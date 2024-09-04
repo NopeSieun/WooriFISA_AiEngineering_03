@@ -47,9 +47,13 @@
   - 엑세스 차단 시 버킷에 업로드해둔 이미지 등을 외부에서 확인할 수 x
     <p align="center">
     <img src="https://github.com/user-attachments/assets/4d0f5604-e0d9-481c-b3f0-d215e9fb2337" width="40%" /> </p>
-  - 이미지 업로드 -> ACL 설정에서 퍼블릭 설정
+  - 정책을 설정해주지 않으면 링크 접속 시 에러 발생
     <p align="center">
-    <img src="https://github.com/user-attachments/assets/6930311e-ad3a-4301-b15a-24b6030180bf" width="40%" /> </p>
+    <img src="https://github.com/user-attachments/assets/3b6a6978-48be-430c-a4e9-b045b7707f4a" width="40%" /> </p>
+  - 이미지 업로드 시 권한 설정 필요 
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/c90f814e-b2e2-464d-9365-8641c6ea1c59" width="40%" /> </p>
+  - 보통은 외부 공개용 버킷과 비공개용 버킷을 따로 생성해 관리 
 <br><br>
 
 - 보안 자격 증명
@@ -62,7 +66,15 @@
   - 버킷 정책 설정
     <p align="center">
     <img src="https://github.com/user-attachments/assets/c452946c-d041-4106-8359-7331af90be8e" width="40%" /> </p>
+<br>
 
+- docker image를 사용하면 더 빠르게 컨테이너 생성해서 사용 가능 -> **AMI**
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/7a414477-7aa8-47d9-8cab-d7bea5008739" width="50%" /> </p>
+<br>
 
+- **SDK**: 명령어를 치지 않아도 서비스 제어 가능하게 만든 추상화된 API 패키지
+  - **Boto3**: Python 프로그래밍 언어에서 AWS와 상호작용하기 위한 공식 SDK
+<br><br>
 
 
