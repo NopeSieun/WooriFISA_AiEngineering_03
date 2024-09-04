@@ -3,6 +3,11 @@
 교육 내용: AWS
 ---
 슬 아침이 쌀쌀해지고 있어서 버스들이 에어컨을 잘 안 켜고 있는데, 그래서 잠을 너무 깊게 자게 된다. 겨울에 히터 틀면 기절할 듯..
+<p align="center">
+<img src="https://github.com/user-attachments/assets/878431b5-c6a6-4719-bbd5-5f24e8fd4d95" width="30%" /> </p><br>
+<p align="center">AWS 하다가 폭주하고 말랑이 장난감 터뜨리고 있는 언니 </p>
+
+
 <br><br>
 
 - **TroubleShooting**
