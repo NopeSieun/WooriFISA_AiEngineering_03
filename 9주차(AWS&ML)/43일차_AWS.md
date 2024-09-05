@@ -33,17 +33,22 @@
   - 자원 낭비가 적음
 <br><br>
 
-- Docker 연결
-  - vs에 dockerfile, docker-compose.yml(dockerignore) 생성 후 docker desktop 실행
-  - `Docker compose up`
-  - `nginx.conf`작성
-    - 한 대 연결
+
+- **로드밸런싱**: 서버가 부담하는 부하를 분산해줌
+  - 많은 트래픽 대처 가능
+  - 무중단 서비스 & 배포 가능
+
+  - Docker 연결
+    - vs에 dockerfile, docker-compose.yml(dockerignore) 생성 후 docker desktop 실행
+    - `Docker compose up`
+    - `nginx.conf`작성
+      - 한 대 연결
       ```python
       events {
           worker_connections 1024; # events 섹션은 Nginx의 이벤트 처리와 관련된 설정 작성. 
       }
       ```
-    - 서버 성능 최적화 및 과부하 방지
+      - 서버 성능 최적화 및 과부하 방지
       ```python
           http {
           server {
@@ -59,8 +64,36 @@
           }
       }
       ```
-    - localhost로 접속 가능해짐
+      - localhost로 접속 가능해짐
       <p align="center">
-      <img src="https://github.com/user-attachments/assets/af301314-6893-44fd-8348-9336a84d4736" width="30%" /> </p><br>
+      <img src="https://github.com/user-attachments/assets/af301314-6893-44fd-8348-9336a84d4736" width="30%" /> </p>
+    - 세 대 연결
+      ```python
+      http {
+          upstream backend {
+              ip_hash; # sticky session을 위해 ip_hash 사용
+              server web1:8000;
+              server web2:8001;
+              server web3:8002;
+          }
+      
+          server {
+              listen 80;
+      
+              location / {
+                  proxy_pass http://backend;
+                  proxy_set_header Host $host;
+                  proxy_set_header X-Real-IP $remote_addr;
+                  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                  proxy_set_header X-Forwarded-Proto $scheme;
+                  proxy_set_header Cookie $http_cookie; # 로그인 세션을 유지하기 위해 쿠키 전달
+              }
+          }
+      }
+      ```
+  - **ip_hash**: 요청이 클라이언트 IP주소로 해싱
+    - 한번 요청 받은 서버가 있을 때 해당 서버에만 요청 분배
+  <br><br>
+
 
 ***
