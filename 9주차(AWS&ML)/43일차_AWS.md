@@ -7,9 +7,7 @@
 
 - **TroubleShooting**: AWS에서 DB 연결이 안 되어 있으면 django가 안 돌아감
   <p align="center">
-  <img src="https://github.com/user-attachments/assets/054476ea-6f7e-42d2-bb77-46b39ac51b5a" width="50%" /> </p><br>
-
-
+  <img src="https://github.com/user-attachments/assets/054476ea-6f7e-42d2-bb77-46b39ac51b5a" width="60%" /> </p><br>
 
 - **RDS**: AWS에서 제공하는 클라우드 기반 DB
   - A, B, C, D 각각 접근 가능한 서브 네트워크 구성
@@ -27,5 +25,10 @@
 <br><br>
 
 - **S3(simple storage service) Bucket**: 로컬 환경에서 지금껏 갖고 있었던 static 파일을 한 데 모아서 migration
+  <br><br>
 
+- **Nginx**: ‘가볍고 강력한’ 웹 서버 프로그램이 모토
+  - 비동기적으로 연결을 진행하며 동시 커넥션의 부하를 분산 -> Apache 단점 보완
+    - **Aphache**: 연결이 많아지면 많은 리소스를 필요로 함
+  - 자원 낭비가 적음 
 ***
