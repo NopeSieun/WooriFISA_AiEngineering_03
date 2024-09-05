@@ -2,12 +2,33 @@
 ---
 교육 내용: AWS 서버 배포 
 ---
-왜 자꾸 잘 때 입을 벌리고 자는지 알 수가 없다. 
+왜 자꾸 잘 때 입을 벌리고 자는지 알 수가 없다. 심지어 점점 크게 벌리고 자는 것 같음 -> 😪 
 <br><br>
 
 - **TroubleShooting**: AWS에서 DB 연결이 안 되어 있으면 django가 안 돌아감
   <p align="center">
   <img src="https://github.com/user-attachments/assets/054476ea-6f7e-42d2-bb77-46b39ac51b5a" width="60%" /> </p><br>
+
+- **TroubleShooting - docker hub** - 버킷에 이미지 업로드
+  - 도커 login부터
+    ```linux
+    docker login
+    ```
+  1. docker image로 만들어서 nopesieun/django-project:v1
+     ```linux
+     docker build -t nopesieun/django-project:v1 .
+     docker push nopesieun/django-project:v1  
+     ```
+  2. run해보기 - env 파일을 `dockerignore`에 숨겨놔서 hub에 안 올라감
+     - .env 파일을 Docker 이미지에 포함하는 대신, 컨테이너 실행 시 .env 파일을 직접 컨테이너에 전달
+       ```linux
+       docker run -d -p 8000:8000 --env-file .env nopesieun/django-project:v1
+       ```
+  3. 8000번에서 접속 되는지 확인
+- 보안그룹을 편집해야 접속 가능
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/6762c0e7-d930-4816-8130-c77bfd9cf644" width="80%" /> </p><br>
+
 
 - **RDS**: AWS에서 제공하는 클라우드 기반 DB
   - A, B, C, D 각각 접근 가능한 서브 네트워크 구성
@@ -96,4 +117,5 @@
   <br><br>
 
 
+     
 ***
