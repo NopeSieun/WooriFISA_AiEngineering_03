@@ -30,5 +30,37 @@
 - **Nginx**: ‘가볍고 강력한’ 웹 서버 프로그램이 모토
   - 비동기적으로 연결을 진행하며 동시 커넥션의 부하를 분산 -> Apache 단점 보완
     - **Aphache**: 연결이 많아지면 많은 리소스를 필요로 함
-  - 자원 낭비가 적음 
+  - 자원 낭비가 적음
+<br><br>
+
+- Docker 연결
+  - vs에 dockerfile, docker-compose.yml(dockerignore) 생성 후 docker desktop 실행
+  - `Docker compose up`
+  - `nginx.conf`작성
+    - 한 대 연결
+      ```python
+      events {
+          worker_connections 1024; # events 섹션은 Nginx의 이벤트 처리와 관련된 설정 작성. 
+      }
+      ```
+    - 서버 성능 최적화 및 과부하 방지
+      ```python
+          http {
+          server {
+              listen 80;
+      
+              location / {
+                  proxy_pass http://web1:8000;
+                  proxy_set_header Host $host;
+                  proxy_set_header X-Real-IP $remote_addr;
+                  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                  proxy_set_header X-Forwarded-Proto $scheme;
+              }
+          }
+      }
+      ```
+    - localhost로 접속 가능해짐
+      <p align="center">
+      <img src="https://github.com/user-attachments/assets/af301314-6893-44fd-8348-9336a84d4736" width="30%" /> </p><br>
+
 ***
