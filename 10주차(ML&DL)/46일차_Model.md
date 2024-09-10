@@ -5,7 +5,7 @@
 어제는 넥슨 네트웍스에서 면접을 봤는데, 면접을 안 본지 오래돼서 감을 좀 잃은 것 같았다. 판교 건물들이 다 멋지고 큼직해서 가고 싶었고, 사람들이 다 사원증을 목에 걸고 다녀서 좀 부러웠다. 
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/70a2e203-15fd-4675-b123-ed90e804dd4e" width="50%" /> </p><br>
+<img src="https://github.com/user-attachments/assets/70a2e203-15fd-4675-b123-ed90e804dd4e" width="30%" /> </p><br>
 
-
+- **경사하강법(Gradient descent)**: 함수의 값이 작아지는 방향으로 독립변수들의 값을 변형시키면서, 함수가 최솟값을 갖도록 하는 독립변수의 값을 탐색하기 위한 방법
 ***
