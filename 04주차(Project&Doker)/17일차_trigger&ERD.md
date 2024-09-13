@@ -7,6 +7,7 @@
 <img src="https://github.com/user-attachments/assets/1197d402-fe92-4df4-9901-6ba3ddedd4c2" width="30%" /> </p><br>
 <p align="center">오둥이 팬분이 주신 오둥 스티커</p>
 <br><br>
+
 - **스토어드 프로시저(Stored Procedure)**: 주 사용하는 여러개의 SQL문을 한데 묶어 함수처럼 만들어 일괄적으로 처리
   - 하나의 요청으로 여러 SQL문 실행 가능
   - 독립적으로 실행 -> 다른 sql문에서 직접 사용 x
