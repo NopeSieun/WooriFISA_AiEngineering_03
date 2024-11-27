@@ -50,7 +50,7 @@
   ```
 <br>
 
-- pandas를 이용해서 SQL문을 datafram으로 가져오기
+- pandas를 이용해서 SQL문을 dataframe으로 가져오기
   ```python
   import pandas as pd
   
