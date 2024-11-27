@@ -14,7 +14,7 @@
     <p align="center">
     <img src="https://github.com/user-attachments/assets/a4ed0ae3-1a0c-4d1a-ac04-ea4a970833e7" width="60%" /> </p><br>
 
-- **pypmysql**: mysql을 python에서 사용할 수 있게 해주는 라이브러리 중 하나
+- **pymysql**: mysql을 python에서 사용할 수 있게 해주는 라이브러리 중 하나
   ```python
   # 작동방식
   
